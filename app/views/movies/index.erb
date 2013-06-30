@@ -6,7 +6,7 @@
     <%= f.submit "Search" %>
 <% end %>
 
-<% if !@movie_results.nil? %>
+<% if !@movie_results.empty? %>
 <table class="table table-striped">
   <tr>
     <th><%= sort_link @search,:name, "Name"  %></th>
