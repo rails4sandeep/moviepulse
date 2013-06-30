@@ -1,0 +1,59 @@
+<h3>Listing Reviews for Movie</h3>
+<h3><%= @movie.name %></h3>
+<div>
+  <b>Overall Movie rating:</b>
+  <% if @average_movie_rating.nil? %>
+  <b>Not enough ratings received</b>
+  <% else %>
+  <%= @average_movie_rating %>
+  <% end %>
+</div>
+<div>
+<b>Release:</b>
+<%= @movie.release %>
+</div>
+<div>
+  <b>Actors:</b>
+<%= @movie.actors %>
+</div>
+<div>
+  <b>Director:</b>
+<%= @movie.director %>
+</div>
+<div>
+  <b>Music:</b>
+<%= @movie.music %>
+</div>
+<div>
+  <b>What the movie is about</b>
+<%= @movie.description %>
+</div>
+<div>
+  <%= image_tag(@movie.movie_url) if @movie.movie? %>
+</div>
+<table>
+  <tr>
+    <div><th>name</th></div>
+    <div><th>Review</th></div>
+    <div><th>Rating</th></div>
+  </tr>
+  <% count = 0 %>
+  <% @reviews.each do |post| %>
+
+      <tr>
+        <div><td><%= @users[count].email %></td></div>
+        <div><td><%= post.review %></td></div>
+        <div><td><%= post.rating %></td></div>
+        <% if user_signed_in? %>
+        <% if @users[count].email == current_user.email %> 
+          <div><td><%= link_to "edit", :controller => "reviews", :action => "edit", :id => post.id %></td></div>
+          <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?',:method => :delete %></td>
+        <% end %>
+        <% end %>
+      </tr>
+   <% count = count + 1 %>
+<% end %>
+
+</table>
+<%= link_to "Add your Review", :controller => "reviews", :action => "new",:movie => @movie.id  %>
+<br />

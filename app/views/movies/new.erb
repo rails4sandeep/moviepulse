@@ -1,0 +1,44 @@
+<div class="form-horizontal">
+<table>
+
+<%= form_for @movie do |f| %>
+<%= render "shared/error_messages",:target => @movie %>
+<div>
+	<%= f.label :name, "Name" %>
+	<%= f.text_field :name %>
+</div>
+<div>
+<%= f.label :release, "Release" %>
+<%= f.date_select :release %>
+</div>
+<div>
+<%= f.label :actors, "Actors" %>
+<%= f.text_field :actors %>
+</div>
+<div>
+<%= f.label :director, "Director" %>
+<%= f.text_field :director %>
+</div>
+<div>
+<%= f.label :music, "Music" %>
+<%= f.text_field :music %>
+</div>
+<div>
+<%= f.label :description, "Description" %>
+<%= f.text_area :description %>
+</div>
+<div>
+<%= f.label :movie, "Load a picture of the movie" %>
+<%= f.file_field :movie %>
+</div>
+<div>
+	<%= gotcha_error %>
+	<%= gotcha %>
+</div>
+<div class="page-element">
+	<%= f.submit "Submit", :disable_with => 'Submiting...' %>
+</div>
+
+<% end %>
+</table>
+</div>

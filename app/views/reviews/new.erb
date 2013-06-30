@@ -1,0 +1,12 @@
+<h3><%= @movie.name %></h3>
+<%= form_tag :action => "create",:movie_id => @movie.id %>
+<%= render "shared/error_messages", :target => @review %>
+  <!--<%= hidden_field_tag :movie_id,:value => @movie.id %>-->
+  <%= label_tag :rating,"Rate the movie" %>
+  <%= select_tag :rating, "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>".html_safe %>
+  <%= label_tag :review,"Your 140 character review" %>
+    <%= text_area_tag :review %>
+  <%= submit_tag "Fire" %>
+ 
+
+ 

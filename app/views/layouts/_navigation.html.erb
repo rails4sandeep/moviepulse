@@ -1,0 +1,23 @@
+<%= link_to "MOVIE PULSE", root_path, :class => 'brand' %>
+<ul class="nav">
+<li class="active"><%= link_to "Home", :controller => "/movies", :action => "dashboard" %></li>
+<li><%= link_to "Add Movies", :controller => "/movies", :action => "new" %></li>
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to('Logout', destroy_user_session_path) %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to('Login', new_user_session_path)  %>
+    </li>
+  <% end %>
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to('Edit account', edit_user_registration_path) %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to('Sign up', new_user_registration_path)  %>
+    </li>
+  <% end %>
+</ul>

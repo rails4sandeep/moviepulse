@@ -1,0 +1,111 @@
+
+
+<div>
+	<table>
+<td>
+	<div>
+	<table>
+	  <tr>
+	    <th>Top Rated Overall</th>
+
+	  </tr>
+
+	  <% @movies.each do |post| %>
+	      <tr>
+	        <td><%= post.name %></td>
+	        <td><%= link_to 'Show', post %></td>
+	      </tr>
+	  <% end %>
+	</table>
+	</div>
+</td>		
+<td>
+	<div>
+	<table>
+	  <tr>
+	    <th>Top Rated by Men</th>
+
+	  </tr>
+
+	  <% @movies_men.each do |post| %>
+	      <tr>
+	        <td><%= post.name %></td>
+	        <td><%= link_to 'Show', post %></td>
+	      </tr>
+	  <% end %>
+	</table>
+	</div>
+</td>
+<td>
+	<div>
+	<table>
+	  <tr>
+	    <th>Top Rated by Women</th>
+
+	  </tr>
+
+	  <% @movies_women.each do |post| %>
+	      <tr>
+	        <td><%= post.name %></td>
+	        <td><%= link_to 'Show', post %></td>
+	      </tr>
+	  <% end %>
+	</table>
+	</div>
+</td>
+<td>
+	<div>
+	<table>
+	  <tr>
+	    <th>Top Rated by Youth</th>
+
+	  </tr>
+
+	  <% @movies_youth.each do |post| %>
+	      <tr>
+	        <td><%= post.name %></td>
+	        <td><%= link_to 'Show', post %></td>
+	      </tr>
+	  <% end %>
+	</table>
+	</div>
+</td>
+</table>
+</div>
+<div>
+	<table>
+	<td>
+	<div>
+	<table>
+	  <tr>
+	    <th>Currently talked about</th>
+	  </tr>
+	  <% @current_movies.each do |post| %>
+	      <tr>
+	        <td><%= post.name %></td>
+	        <td><%= link_to 'Show', post %></td>
+	      </tr>
+	  <% end %>
+	</table>
+	</div>
+	</td>		
+	</table>
+		<table>
+	<td>
+	<div>
+	<table>
+	  <tr>
+	    <th>Dampsquibs</th>
+	  </tr>
+	  <% @movies_dampsquibs.each do |post| %>
+	      <tr>
+	        <td><%= post.name %></td>
+	        <td><%= link_to 'Show', post %></td>
+	      </tr>
+	  <% end %>
+	</table>
+	</div>
+	</td>		
+	</table>
+
+</div>

@@ -1,0 +1,121 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
+
+one:
+  rating: 1
+  review: MyString
+  user_id:
+  movie_id:
