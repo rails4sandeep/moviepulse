@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :set_search
+  #before_filter :set_search
 
+=begin
   def set_search
   	@search=Movie.search(params[:q])
     if params[:q].nil? then
@@ -12,5 +13,6 @@ class ApplicationController < ActionController::Base
       @movie_results=@search.result
     end
   end
+=end
 
 end

@@ -3,6 +3,15 @@ class MoviesController < ApplicationController
   include MoviesHelper
 
   def index
+    @search=Movie.search(params[:q])
+    if params[:q].nil? then
+      @search=Movie.search(params[:q])
+      @movie_results=[]
+    else
+      @search=Movie.search(params[:q])
+      @movie_results=@search.result
+    end
+    #@movies = @q.result(:distinct => true)
     @movies=Movie.all_movies#.order('name').page(params[:page]).per(5)
     #@movies.order('name').paginate(:page => params[:page])
     #@movies=Movie.order("name").page(params[:page]).per(5)
@@ -54,4 +63,5 @@ class MoviesController < ApplicationController
     @current_movies=currently_talked_about
     @movies_dampsquibs=damp_squibs
   end
+
 end
