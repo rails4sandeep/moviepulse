@@ -15,3 +15,7 @@
 /*
  *= require bootstrap_and_overrides
  */
+
+body { 
+    padding-top: 65px; 
+} 
