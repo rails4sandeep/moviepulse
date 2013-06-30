@@ -1,4 +1,4 @@
-require 'carrierwave/orm/activerecord'
+
 class Movie < ActiveRecord::Base
   attr_accessible :name,:release,:actors,:director,:music,:description,:media,:movie
   mount_uploader :movie, MovieUploader
