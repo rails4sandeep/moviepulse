@@ -56,9 +56,9 @@ class MoviesController < ApplicationController
   end
 
   def dashboard
-    @movies=top_rated
-    @movies_men=top_rated_by_sex('male')
-    @movies_women=top_rated_by_sex('female')
+    @movies=Movie.movies_by_average_rating
+    @movies_men=Movie.movies_by_average_rating_men
+    @movies_women=Movie.movies_by_average_rating_women
     @movies_youth=top_rated_by_youth(25)
     @current_movies=currently_talked_about
     @movies_dampsquibs=damp_squibs

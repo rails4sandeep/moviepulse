@@ -5,21 +5,22 @@
     <ignored path="ohmyroots.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/user.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370060072557" ignored="false" />
-    <file path="/movie.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372228678389" ignored="false" />
-    <file path="/review.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1369920163612" ignored="false" />
+    <file path="/movie.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372943001071" ignored="false" />
+    <file path="/review.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372941288313" ignored="false" />
     <file path="/add_column_to_reviews.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1368093141723" ignored="false" />
-    <file path="/Dummy.txt" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372221443648" ignored="false" />
+    <file path="/Dummy.txt" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372939438474" ignored="false" />
     <file path="/routes.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370175457602" ignored="false" />
-    <file path="/movies_controller.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370263089212" ignored="false" />
+    <file path="/movies_controller.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372942625974" ignored="false" />
     <file path="/show.erb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372229156304" ignored="false" />
     <file path="/20130512010837_delete_users_table.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1368320961259" ignored="false" />
-    <file path="/Gemfile" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370427546102" ignored="false" />
+    <file path="/Gemfile" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372943680804" ignored="false" />
     <file path="/new.html.erb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370427853165" ignored="false" />
     <file path="/20130601020917_edit_columns_in_users.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370052681911" ignored="false" />
     <file path="/new.erb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372228379817" ignored="false" />
     <file path="/reviews_controller.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370176213513" ignored="false" />
     <file path="/index.erb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370347810313" ignored="false" />
     <file path="/20130626042558_change_movie_edit_media_column_datatype.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372221154307" ignored="false" />
+    <file path="/20130704120405_change_ratings_data_types_in_movies.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372939848856" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,37 +40,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+      <file leaf-file-name="movie.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
+            <state line="12" column="2" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130618054517_add_columns_to_movies.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130618054517_add_columns_to_movies.rb">
+      <file leaf-file-name="movies_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="12" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20130626042558_change_movie_edit_media_column_datatype.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130626042558_change_movie_edit_media_column_datatype.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="40" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movie_uploader.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/uploaders/movie_uploader.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="62" column="42" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -78,52 +61,70 @@
       <file leaf-file-name="20130626043942_add_column_to_movies.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20130626043942_add_column_to_movies.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="26" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movie.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
+      <file leaf-file-name="20130626042558_change_movie_edit_media_column_datatype.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130626042558_change_movie_edit_media_column_datatype.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="84" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/movies/show.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="26" selection-start="364" selection-end="364" vertical-scroll-proportion="0.5872727">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/movies/new.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="48" selection-start="628" selection-end="628" vertical-scroll-proportion="-13.076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="12" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+            <state line="30" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="0.8798883">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/reviews/new.erb">
+      <file leaf-file-name="Gemfile.lock" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
+            <state line="76" column="21" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reviews_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/reviews_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="6" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="review.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/review.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="2" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20130704120405_change_ratings_data_types_in_movies.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130704120405_change_ratings_data_types_in_movies.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="56" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20130508133226_create_movies.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130508133226_create_movies.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,33 +141,36 @@
     <option name="VCS_SHOW_CONFIRMATION" value="true" />
     <option name="ENVIRONMENT" value="development" />
   </component>
+  <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="DONT" />
+    <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/review.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130601020917_edit_columns_in_users.rb" />
-        <option value="$PROJECT_DIR$/app/views/movies/list.erb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/reviews_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/movies/index.erb" />
         <option value="$PROJECT_DIR$/app/views/reviews/new.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20130618054517_add_columns_to_movies.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130626042558_change_movie_edit_media_column_datatype.rb" />
         <option value="$PROJECT_DIR$/app/views/movies/new.erb" />
-        <option value="$PROJECT_DIR$/app/models/movie.rb" />
         <option value="$PROJECT_DIR$/app/views/movies/show.erb" />
+        <option value="$PROJECT_DIR$/Gemfile.lock" />
+        <option value="$PROJECT_DIR$/app/controllers/reviews_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130704120405_change_ratings_data_types_in_movies.rb" />
+        <option value="$PROJECT_DIR$/app/models/review.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/movie.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="732" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -229,8 +233,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -309,184 +313,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reviews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohmyroots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -495,7 +321,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="FullScreen" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
@@ -801,12 +627,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: ohmyroots" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: ohmyroots" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Production: ohmyroots" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Development: ohmyroots" />
     </list>
     <recent_temporary>
       <list size="2">
@@ -842,23 +668,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36766276" sideWeight="0.675705" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3063209" sideWeight="0.67817897" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.324295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32182103" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32182103" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -897,7 +723,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -926,38 +752,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="393" selection-end="398" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130508133226_create_movies.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="40" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/reviews_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="14" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/index.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="219" selection-end="219" vertical-scroll-proportion="-6.25" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reviews/new.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
@@ -965,18 +759,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="12" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="-0.625" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/movies/new.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="26" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/movies/show.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="17" column="21" selection-start="556" selection-end="556" vertical-scroll-proportion="0.45535713" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130618054517_add_columns_to_movies.rb">
@@ -986,14 +783,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130626042558_change_movie_edit_media_column_datatype.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130704100603_add_ratings_to_movies.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="40" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+        <state line="7" column="7" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/uploaders/movie_uploader.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="21" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130508133226_create_movies.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1002,28 +806,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130626043942_add_column_to_movies.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/new.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130626042558_change_movie_edit_media_column_datatype.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="48" selection-start="628" selection-end="628" vertical-scroll-proportion="-13.076923">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130704120405_change_ratings_data_types_in_movies.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="56" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/review.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="2" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="84" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+        <state line="12" column="2" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/show.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/reviews_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="364" selection-end="364" vertical-scroll-proportion="0.5872727">
+        <state line="16" column="6" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="42" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="0.8798883">
           <folding />
         </state>
       </provider>

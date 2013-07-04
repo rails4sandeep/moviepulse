@@ -1,11 +1,11 @@
 module MoviesHelper
 
-	def top_rated
+	def top_rated_recent_releases
 	    movies=Array.new
 	    movie_hash=Hash.new(0)
-	    reviews=Review.where(:rating => [3,4])
+	    reviews=Review.where(:rating => [4,5])
 	    reviews.each do |review|
-	      movies << Movie.find(review.movie_id)
+	      movies << Movie.find(review.movie_id) if Movie.find(review.movie_id).release.between?(Date.today-90,Date.today)
 	    end
 
 	    movies.each do |movie|
@@ -24,7 +24,7 @@ module MoviesHelper
 	    reviews_men=Array.new
 	    movie_hash=Hash.new(0)
 
-	    reviews=Review.where(:rating => [3,4])
+	    reviews=Review.where(:rating => [4,5])
 	    reviews.each do |review|
 	    	reviews_men << review if (User.find(review.user_id)).sex==sex
 	    end
@@ -50,7 +50,7 @@ module MoviesHelper
 
 	    reviews=Review.where(:rating => [3,4])
 	    reviews.each do |review|
-	    	reviews_men << review if User.find(review.user_id).age == [18..age]
+	    	reviews_men << review if User.find(review.user_id).age.to_i.between?(18,age)
 	    end
 	    reviews_men.each do |review|
 	      movies << Movie.find(review.movie_id)
@@ -74,7 +74,7 @@ module MoviesHelper
 	    movie_hash=Hash.new(0)
 	    reviews=Review.where(:rating => [3,4])
 	    reviews.each do |review|
-	    	reviews_latest << review if review.created_at.to_date==Time.new.utc.to_date
+	    	reviews_latest << review if review.created_at.to_date==Date.today
 	    end
 	    reviews_latest.each do |review|
 	      movies << Movie.find(review.movie_id)

@@ -1,58 +1,36 @@
-
-
-	<table>
-	  <tr>
-	    <th>Top Rated Overall</th>
-
-	  </tr>
-
+<table>
+<tr><th>Top Rated Now Running</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies.each do |post| %>
 	      <tr>
+	      	<td><%= image_tag "images.jpg" %></td>
 	        <td><%= post.name %></td>
 	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
 	      </tr>
 	  <% end %>
 </table>
+</table>
 
-	</table>
-
-	<table>
-	  <tr>
-	    <th>Top Rated by Men</th>
-
-	  </tr>
+<table>
+<tr><th>Top Rated by Gentlemen</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies_men.each do |post| %>
 	      <tr>
+ 			<td><%= image_tag "images.jpg" %></td>
+	      	<!-- <td><%= image_tag post.movie_url(:thumb) if post.movie? %></td> -->
 	        <td><%= post.name %></td>
 	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
 	      </tr>
 	  <% end %>
 </table>	  
-	</table>
+</table>
 
-	<table>
-	  <tr>
-	    <th>Top Rated by Women</th>
-
-	  </tr>
+<table>
+<tr><th>Top Rated by Women</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies_women.each do |post| %>
 	      <tr>
-	        <td><%= post.name %></td>
-	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
-	      </tr>
-	  <% end %>
-</table>
-	</table>
-	<table>
-	  <tr>
-	    <th>Top Rated by Youth</th>
-	  </tr>
-<table class="table table-bordered table-condensed table-striped">	
-	  <% @movies_youth.each do |post| %>
-	      <tr>
+	      	<td><%= image_tag "images.jpg" %></td>
 	        <td><%= post.name %></td>
 	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
 	      </tr>
@@ -60,30 +38,41 @@
 </table>
 </table>
 
-	<table>
-	  <tr>
-	    <th>Currently talked about</th>
-	  </tr>
+<table>
+<tr><th>Top Rated by Youth</th></tr>
+<table class="table table-bordered table-condensed table-striped">	
+	<% @movies_youth.each do |post| %>
+	      <tr>
+	      	<td><%= image_tag "images.jpg" %></td>
+	        <td><%= post.name %></td>
+	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
+	      </tr>
+	  <% end %>
+</table>
+</table>
+
+<table>
+<tr><th>Currently talked about</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @current_movies.each do |post| %>
 	      <tr>
+	      	<td><%= image_tag "images.jpg" %></td>
 	        <td><%= post.name %></td>
 	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
 	      </tr>
 	  <% end %>
 </table>
-	</table>
+</table>
 
-	<table>
-	  <tr>
-	    <th>Dampsquibs</th>
-	  </tr>
+<table>
+<tr><th>Dampsquibs</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies_dampsquibs.each do |post| %>
 	      <tr>
+	      	<td><%= image_tag "images.jpg" %></td>
 	        <td><%= post.name %></td>
 	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
 	      </tr>
 	  <% end %>
-	</table>
+</table>
 </table>

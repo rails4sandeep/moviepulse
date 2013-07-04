@@ -1,8 +1,11 @@
 <table class=" table table-bordered table-condensed table-striped">
   <caption><b>Listing Reviews for Movie</b></caption>
-  <td><%= image_tag(@movie.movie_url) if @movie.movie? %></td>
+<!--   <tr><td><%= image_tag @movie.movie_url(:thumb) if @movie.movie? %></td></tr>
+ -->  <tr>
   <tr>
-  <tr><td><b>Name: </b><%= @movie.name %></td></tr>
+    <td><%= image_tag "images.jpg" %></td>
+    <td><b>Name: </b><%= @movie.name %></td>
+  </tr>
   <tr>
     <td>
         <b>Overall Movie rating: </b>
@@ -19,7 +22,7 @@
   <tr><td><b>Music: </b><%= @movie.music %></td></tr>
   <tr><td><b>Description: </b><%= @movie.description %></td></tr>
   </tr>
-</table>
+  </table>
 
 <div>
   
