@@ -13,7 +13,7 @@ gem 'ransack'
 #validations
 gem 'dynamic_form'
 #file uploads
-gem 'rmagick'
+gem "rmagick", :require => 'RMagick'
 gem 'carrierwave'
 #captchas
 gem 'gotcha'
