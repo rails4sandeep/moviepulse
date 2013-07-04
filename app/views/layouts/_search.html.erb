@@ -1,0 +1,24 @@
+<div>
+<%= search_form_for @search do |f| %>
+    <%= f.label :name_cont, "Search Movies" %>
+    <%= f.text_field :name_cont,:class => "search-query" %>
+    <%= f.submit "Search" %>
+<% end %>
+
+<% if !@movie_results.nil? %>
+<table class="table table-striped">
+  <tr>
+    <th><%= sort_link @search,:name, "Name"  %></th>
+  </tr>
+  <% @movie_results.each do |post| %>
+      <tr>
+        <td><%= post.name %></td>
+        <td><%= link_to 'Show', post %></td>
+      </tr>
+  <% end %>
+</table>
+</div>
+<% end %>
+
+
+

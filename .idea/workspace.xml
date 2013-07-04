@@ -8,7 +8,7 @@
     <file path="/movie.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372943001071" ignored="false" />
     <file path="/review.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372941288313" ignored="false" />
     <file path="/add_column_to_reviews.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1368093141723" ignored="false" />
-    <file path="/Dummy.txt" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372939438474" ignored="false" />
+    <file path="/Dummy.txt" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372945450132" ignored="false" />
     <file path="/routes.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370175457602" ignored="false" />
     <file path="/movies_controller.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372942625974" ignored="false" />
     <file path="/show.erb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372229156304" ignored="false" />
@@ -144,6 +144,11 @@
   <component name="Git.Settings">
     <option name="SYNC_SETTING" value="DONT" />
     <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -321,7 +326,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
