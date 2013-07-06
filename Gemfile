@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "1.9.3"
+#ruby "1.9.3"
 gem 'rails', '3.2.13'
 
 #user management
@@ -26,9 +26,9 @@ gem 'passenger'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
+gem 'sqlite3'
 #gem 'mysql2'
-gem 'pg'
+#gem 'pg'
 
 
 # Gems used only for assets and not required
