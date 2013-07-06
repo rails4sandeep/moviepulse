@@ -27,7 +27,7 @@ class Review < ActiveRecord::Base
       men_count = men_count + 1 if User.find(review.user_id).sex == 'male'
       sum_women = sum_women+review.rating if User.find(review.user_id).sex == 'female'
       women_count = women_count + 1 if User.find(review.user_id).sex == 'female'
-    end
+    end unless reviews.empty?
     average_overall=(sum/reviews.count)
     average_men=sum_men/men_count
     average_women=sum_women/women_count
