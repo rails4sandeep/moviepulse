@@ -12,10 +12,10 @@ class MoviesController < ApplicationController
       @movie_results=@search.result
     end
     #@movies = @q.result(:distinct => true)
-    @movies=Movie.all_movies#.order('name').page(params[:page]).per(5)
+    #@movies=Movie.all_movies#.order('name').page(params[:page]).per(5)
     #@movies.order('name').paginate(:page => params[:page])
     #@movies=Movie.order("name").page(params[:page]).per(5)
-    @movies=Kaminari.paginate_array(@movies).page(params[:page]).per(10)
+    @movies=Kaminari.paginate_array(@movie_results).page(params[:page]).per(10)
   end
 
   def show
@@ -56,7 +56,8 @@ class MoviesController < ApplicationController
   end
 
   def dashboard
-    @movies=Movie.movies_by_average_rating
+    #@movies=Movie.movies_by_average_rating
+    @movies=Kaminari.paginate_array(Movie.movies_by_average_rating).page(params[:page]).per(10)
     @movies_men=Movie.movies_by_average_rating_men
     @movies_women=Movie.movies_by_average_rating_women
     @movies_youth=top_rated_by_youth(25)

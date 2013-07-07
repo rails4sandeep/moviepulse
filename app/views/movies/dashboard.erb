@@ -1,11 +1,12 @@
 <table>
 <tr><th>Top Rated Now Running</th></tr>
+<%= paginate @movies %>
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies.each do |post| %>
 	      <tr>
-	      	<td><%= image_tag "images.jpg" %></td>
+	      	<td><%= image_tag post.movie_url(:thumb) if post.movie? %></td>
 	        <td><%= post.name %></td>
-	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
+	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
 	      </tr>
 	  <% end %>
 </table>
@@ -16,10 +17,9 @@
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies_men.each do |post| %>
 	      <tr>
- 			<td><%= image_tag "images.jpg" %></td>
-	      	<!-- <td><%= image_tag post.movie_url(:thumb) if post.movie? %></td> -->
+	      	<td><%= image_tag post.movie_url(:thumb) if post.movie? %></td>
 	        <td><%= post.name %></td>
-	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
+	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
 	      </tr>
 	  <% end %>
 </table>	  
@@ -30,9 +30,9 @@
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies_women.each do |post| %>
 	      <tr>
-	      	<td><%= image_tag "images.jpg" %></td>
+	      	<td><%= image_tag post.movie_url(:thumb) if post.movie? %></td>
 	        <td><%= post.name %></td>
-	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
+	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
 	      </tr>
 	  <% end %>
 </table>
@@ -43,9 +43,9 @@
 <table class="table table-bordered table-condensed table-striped">	
 	<% @movies_youth.each do |post| %>
 	      <tr>
-	      	<td><%= image_tag "images.jpg" %></td>
+	      	<td><%= image_tag post.movie_url(:thumb) if post.movie? %></td>
 	        <td><%= post.name %></td>
-	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
+	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
 	      </tr>
 	  <% end %>
 </table>
@@ -56,9 +56,9 @@
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @current_movies.each do |post| %>
 	      <tr>
-	      	<td><%= image_tag "images.jpg" %></td>
+	      	<td><%= image_tag post.movie_url(:thumb) if post.movie? %></td>
 	        <td><%= post.name %></td>
-	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
+	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
 	      </tr>
 	  <% end %>
 </table>
@@ -69,9 +69,9 @@
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies_dampsquibs.each do |post| %>
 	      <tr>
-	      	<td><%= image_tag "images.jpg" %></td>
+	      	<td><%= image_tag post.movie_url(:thumb) if post.movie? %></td>
 	        <td><%= post.name %></td>
-	        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
+	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
 	      </tr>
 	  <% end %>
 </table>

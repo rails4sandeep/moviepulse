@@ -14,7 +14,6 @@ class ReviewsController < ApplicationController
     @review.rating=params[:rating]
     @review.review=params[:review]
     if @review.save
-
       flash[:notice] = 'Movie was successfully created.'
       redirect_to :controller => "movies",:action => "show",:id => @review.movie_id
     else
@@ -27,7 +26,6 @@ class ReviewsController < ApplicationController
     #@movie=Movie.find(params[:movie])
     @review=Review.find(params[:id])
     @movie=Movie.find(@review.movie_id)
-  
   end
 
   def update

@@ -1,9 +1,11 @@
 <div class="navbar-search">
   <div>
   <%= search_form_for @search do |f| %>
-    <%= f.label :name_cont, "Search Movies" %>
     <%= f.text_field :name_cont,:class => "search-query" %>
-    <div class="btn btn-inverse"><%= f.submit "Search" %></div>
+    <div class="btn btn-inverse"><%= f.submit "Search Movies" %></div>
+    <strong>
+      or see what Australia is <%= link_to "liking", controller: "movies", action: "dashboard" %>
+    </strong>
   <% end %>
 
   <% if !@movie_results.empty? %>
@@ -22,17 +24,13 @@
 <% end %>
 </div>
 
-<table class=" table table-bordered">
-  <tr>
-    <th>Name</th>
-    <th></th>
-  </tr>
-  <% @movies.each do |post| %>
-      <tr>
-        <td><%= post.name %></td>
-        <td><%= link_to '', post, class: 'icon-arrow-right' %></td>
-      </tr>
-  <% end %>
-<%= paginate @movies %>
-</table>
+<% if @movie_results.empty? %>
+  <table>
+    <tr>
+      <td>Did not find the movie? Would you like to 
+        <%= link_to "add the movie", controller: "movies", action: "new" %></td>
+    </tr>
+  </table>
+<% end %>
+
 

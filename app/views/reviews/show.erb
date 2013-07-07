@@ -1,33 +1,30 @@
 <h3>Your Reviews</h3>
 <% @count =0 %>
-<div>
-	<table>
-		<td>
-			<tr><b>Movie</b></tr>
-			<tr><b>Review</b></tr>
-			<tr><b>Rating</b></tr>
-		</td>
-	</table>
-</div> 
+
 <% @reviews.each do |review| %>
-	<div>
-		<table>
-		<td>
-		<tr>
-			<%= @movies[@count].name %>
-		</tr>	
-		</tr>
-			<%= review.rating%>
-		</tr>
-		<tr>
-			<%= review.review%>
-		</tr>
-		<tr>
-			<%= link_to "edit", :controller => "reviews", :action => "edit", :id => review.id %>
-			<%= link_to "destroy", :controller => "reviews", :action => "destroy", :id => review.id %>
-		</tr>
-		</td>
-		</table>
-	</div>
-	<% @count = @count + 1 %>
+<table class=" table table-bordered table-condensed table-striped">
+  <caption><b>Listing Reviews for Movie</b></caption>
+  <tr>
+  	<td><b>Movie:</b><%= @movies[@count].name %></td>
+  </tr>
+  <tr>
+  	<td><b>Rating:</b><%= review.rating%></td>
+  </tr>
+  <tr>
+  	<td><b>Review:</b><%= review.review%></td>
+  </tr>
+  <tr>
+  	<td>
+  		<%= link_to "edit", :controller => "reviews", :action => "edit", :id => review.id %>
+		<%= link_to "destroy", :controller => "reviews", :action => "destroy", :id => review.id %>
+        <div class="btn btn-inverse">
+          <%= link_to "Edit", :controller => "reviews", :action => "edit", :id => review.id %>
+        </div>
+        <div class="btn btn-inverse">
+          <%= link_to 'Destroy', review, :confirm => 'Are you sure?',:method => :delete %></td></tr>    
+        </div>      
+  	</td>
+  </tr>
+</table>
+<% @count = @count + 1 %>
 <% end %>
