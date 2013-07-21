@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-#ruby "1.9.3"
+ruby "1.9.3"
 gem 'rails','3.2.13'
 
 #user management
@@ -13,7 +13,7 @@ gem 'ransack'
 #validations
 gem 'dynamic_form'
 #file uploads
-gem "rmagick", :require => 'RMagick'
+gem "rmagick",:require => 'RMagick'
 gem 'carrierwave'
 #saving files to amazon s3
 gem "fog"
