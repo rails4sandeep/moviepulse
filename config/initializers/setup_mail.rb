@@ -1,8 +1,8 @@
 ActionMailer::Base.smtp_settings = {
-    :address              => "smtp.gmail.com",
+    :address              => "smtp.postageapp.com",
     :port                 => 587,
-    :domain               => "googlemail.com",
-    :user_name            => "sandeepkuvs@gmail.com",
+    :domain               => "postageapp.com",
+    :user_name            => "no-return@postageapp.com",
     :password             => "Sydney#123",
     :authentication       => "plain",
     :enable_starttls_auto => true
