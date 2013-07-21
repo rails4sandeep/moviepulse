@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby "1.9.3"
-gem 'rails', '3.2.13'
+#ruby "1.9.3"
+gem 'rails','3.2.13'
 
 #user management
 gem 'devise'
@@ -16,7 +16,7 @@ gem 'dynamic_form'
 gem "rmagick", :require => 'RMagick'
 gem 'carrierwave'
 #saving files to amazon s3
-gem "fog", "~> 1.3.1"
+gem "fog"
 #emails on heroku
 gem 'postageapp'
 #captchas
