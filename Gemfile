@@ -15,6 +15,10 @@ gem 'dynamic_form'
 #file uploads
 gem "rmagick", :require => 'RMagick'
 gem 'carrierwave'
+#saving files to amazon s3
+gem "fog", "~> 1.3.1"
+#emails on heroku
+gem 'postageapp'
 #captchas
 gem 'gotcha'
 #front end design
