@@ -107,8 +107,6 @@ GEM
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
-    postageapp (1.0.21)
-      json
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -188,7 +186,6 @@ DEPENDENCIES
   less-rails
   passenger
   pg
-  postageapp
   rails (= 3.2.13)
   ransack
   rmagick

@@ -2,9 +2,9 @@
 # four configuration values can also be set straight in your models.
 Devise.setup do |config|
   # Configure the e-mail address which will be shown in DeviseMailer.
-  #config.mailer_sender = "please-change-me@config-initializers-devise.com"
+  config.mailer_sender = "do-not-reply@moviepulse.com"
   #config.mailer_sender = "sandeepkuvs@gmail.com"
-  config.mailer = "PostageappDeviseMailer"
+  #config.mailer = "PostageappDeviseMailer"
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating an user. By default is

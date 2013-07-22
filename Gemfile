@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "1.9.3"
+#ruby "1.9.3"
 gem 'rails','3.2.13'
 
 #user management
@@ -18,7 +18,7 @@ gem 'carrierwave'
 #saving files to amazon s3
 gem "fog"
 #emails on heroku
-gem 'postageapp'
+#gem 'postageapp'
 #captchas
 gem 'gotcha'
 #front end design
