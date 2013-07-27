@@ -1,10 +1,12 @@
 <table class=" table table-bordered table-condensed table-striped">
   <caption><b>Listing Reviews for Movie</b></caption>
 <!--   <tr><td><%= image_tag @movie.movie_url(:thumb) if @movie.movie? %></td></tr>
- -->  <tr>
+ -->  
   <tr>
-    <td><%= image_tag @movie.movie_url(:thumb) if @movie.movie? %>
-    <b>Name: </b><%= @movie.name %></td>
+    <!--<%= image_tag @movie.movie_url(:thumb) if @movie.movie? %>-->
+      <td><%= image_tag @movie.poster_url %>
+        <%= @movie.movie %></td></tr>
+    <tr><td></td><b>Name: </b><%= @movie.name %></td>
   </tr>
   <tr>
     <td>
@@ -16,11 +18,11 @@
         <% end %>
     </td>
   </tr>
-  <tr><td><b>Release Date: </b><%= @movie.release %></td></tr>
-  <tr><td><b>Actors: </b><%= @movie.actors %></td></tr>
-  <tr><td><b>Director: </b><%= @movie.director %></td></tr>
-  <tr><td><b>Music: </b><%= @movie.music %></td></tr>
-  <tr><td><b>Description: </b><%= @movie.description %></td></tr>
+  <tr><td><b>Release Date: </b><%= @movie.movie_au_release_date %></td></tr>
+  <tr><td><b>Actors: </b><%= @movie.movie_cast %></td></tr>
+  <tr><td><b>Tagline: </b><%= @movie.movie_tagline %></td></tr>
+  <tr><td><b>TMDB Rating: </b><%= @movie.movie_average_rating %></td></tr>
+  <tr><td><b>Description: </b><%= @movie.movie_description %></td></tr>
   </tr>
   </table>
 
@@ -33,7 +35,7 @@
 <table class="table table-bordered table-condensed table-striped">
   
   <tr><th>Name</th></tr>
-  <tr><td><%= @users[count].email %></td></tr>
+  <tr><td><%= @users[count].username %></td></tr>
   <tr><th>Review</th></tr>
   <tr><td><%= post.review %></td></tr>
   <tr><th>Rating</th></tr>

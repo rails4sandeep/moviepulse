@@ -30,7 +30,8 @@
 </div>
 <div>
 <%= f.label :movie, "Load a picture of the movie" %>
-<%= f.file_field :movie %>
+<%= f.text_field :remote_movie_url %>
+<!--<%= f.file_field :movie %>-->
 </div>
 <div>
 	<%= gotcha_error %>
@@ -43,3 +44,4 @@
 <% end %>
 </table>
 </div>
+

@@ -25,3 +25,86 @@ end
 PostageApp.configure do |config|
   config.api_key = 'YDkLWfSXDM10oFQb9GiSe4FTd1Juf4Zx'
 end
+
+TMDB API Key: c3871ea7f0402a006b8949e41643bd93
+
+
+require 'themoviedb'
+
+
+class MovieSeeder
+
+def initialize
+	Tmdb::Api.key("c3871ea7f0402a006b8949e41643bd93")
+end
+
+def matching_movie_results(movie_name)
+	Tmdb::Movie.find(movie_name).first
+end
+
+def movie_title(movie)
+	movie.title
+end
+
+def movie_tmdb_id(movie)
+	movie.id
+end
+
+def movie_description(movie)
+	movie.overview
+end
+
+def movie_cast(movie)
+	cast_str=""
+	cast_list=Tmdb::Movie.casts(movie_tmdb_id(movie))
+	cast_list.each do |cast|
+		cast_str=cast_str+','+ cast['name']
+	end
+	cast_str[1..-1]
+end
+
+def movie_average_rating(movie)
+	movie.vote_average
+end
+
+def movie_no_of_votes(movie)
+	movie.vote_count
+end
+
+def movie_au_release_date(movie)
+	au_release_date=''
+	releases=Tmdb::Movie.releases(movie_tmdb_id(movie))['countries']
+	releases.each do |rel|
+		if !rel['iso_3166_1'].nil?
+			au_release_date=rel['release_date'] if rel['iso_3166_1']=='AU'
+		end
+	end
+	return au_release_date
+end
+
+def movie_image_url(movie)
+	configuration = Tmdb::Configuration.new
+	image=Tmdb::Movie.images(movie_tmdb_id(movie)).first
+	puts "#{image.inspect}"
+	return configuration.base_url+'w185'+image['file_path']
+end
+
+def movie_trailer_url(movie)
+	configuration = Tmdb::Configuration.new
+	trailer=Tmdb::Movie.trailers(movie_tmdb_id(movie))['youtube'][0]['source']
+	return 'youtube.com/embed/'+trailer
+end
+end
+
+ms=MovieSeeder.new
+movie=ms.matching_movie_results("The Lone Ranger")
+puts "#{movie.inspect}"
+puts ms.movie_title movie
+puts ms.movie_tmdb_id movie
+puts ms.movie_description movie
+puts ms.movie_cast movie
+puts ms.movie_average_rating movie
+puts ms.movie_au_release_date movie
+puts ms.movie_image_url movie
+puts ms.movie_trailer_url movie
+

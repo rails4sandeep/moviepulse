@@ -3,11 +3,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
 </a>
-<%= link_to "", root_path, :class => 'brand' %>
+<%= link_to "MOVIE PULSE", root_path, :class => 'brand' %>
 <div class="nav-collapse">
   <ul class="nav">
     <li class="active"><%= link_to "Home", :controller => "/movies", :action => "dashboard" %></li>
-    <li><%= link_to "Add Movies", :controller => "/movies", :action => "new" %></li>
+    <li><%= link_to "Add Movies", :controller => "/movies", :action => "index" %></li>
     <li><%= link_to "Search Movies", controller: "/movies", action: "index" %></li>
       <% if user_signed_in? %>
         <li>

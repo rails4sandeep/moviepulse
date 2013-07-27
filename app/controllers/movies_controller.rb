@@ -3,6 +3,7 @@ class MoviesController < ApplicationController
   include MoviesHelper
 
   def index
+    @tmdb_movie_results=[]
     @search=Movie.search(params[:q])
     if params[:q].nil? then
       @search=Movie.search(params[:q])
@@ -10,6 +11,12 @@ class MoviesController < ApplicationController
     else
       @search=Movie.search(params[:q])
       @movie_results=@search.result
+    end
+    logger.debug "inspect search-->#{@search.inspect}"
+    if params[:q].nil?
+      @tmdb_movie_results=[]
+    else   
+      @tmdb_movie_results=matching_movie_results(params[:q]['name_cont'])
     end
     #@movies = @q.result(:distinct => true)
     #@movies=Movie.all_movies#.order('name').page(params[:page]).per(5)
@@ -52,6 +59,19 @@ class MoviesController < ApplicationController
         redirect_to :action => "show", :id => @movie.id
       else
         render :action => "new"
+      end
+  end
+
+  def create_from_tmdb
+    @movie = Movie.new
+    @movie.name=movie_title(params[:id])
+    @movie.tmdb_id=params[:id]
+
+      if @movie.save
+        flash[:notice] = 'Movie was successfully created.'
+        redirect_to :action => "show", :id => @movie.id
+      else
+        render :action => "index"
       end
   end
 

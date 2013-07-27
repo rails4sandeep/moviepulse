@@ -3,7 +3,7 @@
 
 <% @reviews.each do |review| %>
 <table class=" table table-bordered table-condensed table-striped">
-  <caption><b>Listing Reviews for Movie</b></caption>
+  <caption><b>Listing Reviews for User</b></caption>
   <tr>
   	<td><b>Movie:</b><%= @movies[@count].name %></td>
   </tr>
@@ -15,8 +15,6 @@
   </tr>
   <tr>
   	<td>
-  		<%= link_to "edit", :controller => "reviews", :action => "edit", :id => review.id %>
-		<%= link_to "destroy", :controller => "reviews", :action => "destroy", :id => review.id %>
         <div class="btn btn-inverse">
           <%= link_to "Edit", :controller => "reviews", :action => "edit", :id => review.id %>
         </div>

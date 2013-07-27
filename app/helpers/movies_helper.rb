@@ -108,4 +108,63 @@ module MoviesHelper
 	    end	
 	    return movies
   end
+
+def matching_movie_results(movie_name)
+  Tmdb::Movie.find(movie_name)
+  
+end
+
+def movie_title(movie_id)
+  Tmdb::Movie.detail(movie_id).original_title
+end
+
+def movie_tmdb_id(movie)
+  movie.id
+end
+
+def movie_description(movie)
+  movie.tagline
+end
+
+def movie_cast(movie)
+  cast_str=""
+  cast_list=Tmdb::Movie.casts(movie_tmdb_id(movie))
+  cast_list.each do |cast|
+    cast_str=cast_str+','+ cast['name']
+  end
+  cast_str[1..-1]
+end
+
+def movie_average_rating(movie)
+  movie.vote_average
+end
+
+def movie_no_of_votes(movie)
+  movie.vote_count
+end
+
+def movie_au_release_date(movie)
+  au_release_date=''
+  releases=Tmdb::Movie.releases(movie_tmdb_id(movie))['countries']
+  releases.each do |rel|
+    if !rel['iso_3166_1'].nil?
+      au_release_date=rel['release_date'] if rel['iso_3166_1']=='AU'
+    end
+  end
+  return au_release_date
+end
+
+def movie_image_url(movie)
+  configuration = Tmdb::Configuration.new
+  image=Tmdb::Movie.images(movie_tmdb_id(movie)).first
+  puts "#{image.inspect}"
+  return configuration.base_url+'w342'+image['file_path']
+end
+
+def movie_trailer_url(movie)
+  configuration = Tmdb::Configuration.new
+  trailer=Tmdb::Movie.trailers(movie_tmdb_id(movie))['youtube'][0]['source']
+  return 'youtube.com/embed/'+trailer
+end
+
 end

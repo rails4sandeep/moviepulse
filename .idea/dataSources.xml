@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2733216156">
-    <data-source source="LOCAL" name="Rails ohmyroots: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="5cd5d490-8155-4f41-9646-f3d3876e0909">
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+  <component name="DataSourceManagerImpl" format="xml" hash="2204445617">
+    <data-source source="LOCAL" name="Rails ohmyroots: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="e40a7b83-b1c1-4a25-ae4f-326411f3b6b3">
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/ohmyroots_test</jdbc-url>
+      <user-name>ohmyroots</user-name>
       <libraries>
         <library>
-          <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/xerial-sqlite-license.txt</url>
+          <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>
         </library>
         <library>
-          <url>jar://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/sqlite-jdbc-3.7.2.jar!/</url>
+          <url>jar://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-9.1-901.jdbc3.jar!/</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails ohmyroots: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="ef71427d-fc74-4b91-bb37-c618b2335f55">
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/ohmyroots_production</jdbc-url>
+      <user-name>ohmyroots</user-name>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>jar://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-9.1-901.jdbc3.jar!/</url>
         </library>
       </libraries>
     </data-source>
