@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/dashboard.erb" afterPath="$PROJECT_DIR$/app/views/movies/dashboard.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/index.erb" afterPath="$PROJECT_DIR$/app/views/movies/index.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/movie.rb" afterPath="$PROJECT_DIR$/app/models/movie.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/movies_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/movies_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/new.erb" afterPath="$PROJECT_DIR$/app/views/movies/new.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ohmyroots.iml" afterPath="$PROJECT_DIR$/.idea/ohmyroots.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/show.erb" afterPath="$PROJECT_DIR$/app/views/movies/show.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130727003521_add_columns_movie_tm_db_id.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130727050357_add_column_to_movies_poster.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/movies_2013.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/themoviedb.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ohmyroots.iws" />
@@ -28,7 +14,7 @@
     <file path="/movie.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1374904466461" ignored="false" />
     <file path="/review.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1372941288313" ignored="false" />
     <file path="/add_column_to_reviews.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1368093141723" ignored="false" />
-    <file path="/Dummy.txt" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1374911859196" ignored="false" />
+    <file path="/Dummy.txt" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1374923370379" ignored="false" />
     <file path="/routes.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1370175457602" ignored="false" />
     <file path="/movies_controller.rb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1374904432432" ignored="false" />
     <file path="/show.erb" changelist="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" time="1374904445843" ignored="false" />
@@ -73,7 +59,7 @@
       <file leaf-file-name="movie.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="10" selection-start="788" selection-end="788" vertical-scroll-proportion="0.67639256">
+            <state line="79" column="10" selection-start="2387" selection-end="2387" vertical-scroll-proportion="1.144">
               <folding />
             </state>
           </provider>
@@ -91,7 +77,7 @@
       <file leaf-file-name="movies_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="5" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
+            <state line="28" column="5" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,7 +104,7 @@
       <file leaf-file-name="movies_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/movies_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="23" selection-start="3751" selection-end="3751" vertical-scroll-proportion="0.0">
+            <state line="161" column="23" selection-start="3737" selection-end="3737" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -259,6 +245,7 @@
     </navigator>
     <panes>
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,22 +266,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="settings.github" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="settings.github" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="true" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToClass.includeJavaFiles" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: ohmyroots">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -677,14 +663,14 @@
       <method />
     </configuration>
     <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: ohmyroots" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: ohmyroots" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.routes" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.db:reset" />
-      <item index="7" class="java.lang.String" itemvalue="IRB console.Rails console: ohmyroots" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.db:reset" />
+      <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: ohmyroots" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Production: ohmyroots" />
+      <item index="7" class="java.lang.String" itemvalue="Rails.Development: ohmyroots" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -746,11 +732,11 @@
     <frame x="0" y="22" width="1280" height="732" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32810047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23419774" sideWeight="0.6703297" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21393842" sideWeight="0.67189956" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21717991" sideWeight="0.67086613" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32182103" sideWeight="0.11993517" order="10" side_tool="true" content_ui="tabs" />
@@ -915,7 +901,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
+        <state line="28" column="5" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -943,14 +929,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/movies_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="23" selection-start="3751" selection-end="3751" vertical-scroll-proportion="0.0">
+        <state line="161" column="23" selection-start="3737" selection-end="3737" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="10" selection-start="788" selection-end="788" vertical-scroll-proportion="0.67639256">
+        <state line="79" column="10" selection-start="2387" selection-end="2387" vertical-scroll-proportion="1.144">
           <folding />
         </state>
       </provider>
