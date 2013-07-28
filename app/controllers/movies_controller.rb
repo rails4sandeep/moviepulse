@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
     #@movies=Movie.all_movies#.order('name').page(params[:page]).per(5)
     #@movies.order('name').paginate(:page => params[:page])
     #@movies=Movie.order("name").page(params[:page]).per(5)
-    #@movies=Kaminari.paginate_array(@movie_results).page(params[:page]).per(5)
+    @movies=Kaminari.paginate_array(@movie_results).page(params[:page]).per(5)
     @tmdb_movies=Kaminari.paginate_array(@tmdb_movie_results).page(params[:page]).per(5)
   end
 

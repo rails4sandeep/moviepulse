@@ -15,12 +15,13 @@
   <tr>
     <th><%= sort_link @search,:name, "Name"  %></th>
   </tr>
-  <% @movie_results.each do |post| %>
+  <% @movies.each do |post| %>
       <tr>
         <td><%= link_to "#{post.name}", post %></td>
       </tr>
   <% end %>
   </table>
+  <%= paginate @movies %>
   </div>
 <% end %>
 </div>
