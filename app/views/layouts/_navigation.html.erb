@@ -7,7 +7,6 @@
 <div class="nav-collapse">
   <ul class="nav">
     <li class="active"><%= link_to "Home", :controller => "/movies", :action => "dashboard" %></li>
-    <li><%= link_to "Add Movies", :controller => "/movies", :action => "index" %></li>
     <li><%= link_to "Search Movies", controller: "/movies", action: "index" %></li>
       <% if user_signed_in? %>
         <li>
@@ -28,6 +27,9 @@
       <% else %>
         <li>
         <%= link_to('Login', new_user_session_path)  %>
+        </li>
+        <li>
+          <%= link_to "Why" %>
         </li>
       <% end %>
   </ul>

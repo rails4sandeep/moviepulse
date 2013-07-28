@@ -111,7 +111,6 @@ module MoviesHelper
 
 def matching_movie_results(movie_name)
   Tmdb::Movie.find(movie_name)
-  
 end
 
 def movie_title(movie_id)

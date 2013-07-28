@@ -9,39 +9,38 @@
   <% end %>
 
   <% if !@movie_results.empty? %>
-  <table class="table table-striped">
+  
+  <table class="table table-bordered table-condensed table-striped">
     <caption><b>From movie pulse database</b></caption>
   <tr>
     <th><%= sort_link @search,:name, "Name"  %></th>
   </tr>
   <% @movie_results.each do |post| %>
       <tr>
-        <td><%= post.name %></td>
-        <td></i><%= link_to '', post, class: 'icon-arrow-right' %></td>
+        <td><%= link_to "#{post.name}", post %></td>
       </tr>
   <% end %>
   </table>
   </div>
 <% end %>
+</div>
+</div>
 </div>
 
 <% if !@tmdb_movie_results.empty? %>
-  <table class="table table-striped">
-    <caption><b>If you are searching for one of these movies, you can add them to the movie pulse database</b></caption>
+
+  <table class="table table-bordered table-condensed table-striped">
+    <caption><b>Did you mean</b></caption>
   <tr>
     <th><%= sort_link @search,:name, "Name"  %></th>
   </tr>
-  <% @tmdb_movie_results.each do |post| %>
+  <% @tmdb_movies.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
-        
-        <td><div class="btn btn-inverse"><%= link_to "add the movie", controller: "movies", action: "create_from_tmdb",id: post.id %></div></td>
-      
+        <td>
+          <%= link_to "#{post.title}",controller: "movies", action: "create_from_tmdb",id: post.id %>
+        </td>
       </tr>
   <% end %>
   </table>
-  </div>
-<% end %>
-</div>
-
-
+  <% end %>
+  <%= paginate @tmdb_movies %>

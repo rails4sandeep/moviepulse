@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_filter :authenticate_user!, :only => [:new, :create], :except => [:index,:show,:movie,:dashboard]
+  before_filter :authenticate_user!, :only => [:new, :create], :except => [:index,:show,:movie,:dashboard,:create_from_tmdb]
   include MoviesHelper
 
   def index
@@ -12,8 +12,7 @@ class MoviesController < ApplicationController
       @search=Movie.search(params[:q])
       @movie_results=@search.result
     end
-    logger.debug "inspect search-->#{@search.inspect}"
-    if params[:q].nil?
+    if params[:q].nil? || params[:q]['name_cont'].empty?
       @tmdb_movie_results=[]
     else   
       @tmdb_movie_results=matching_movie_results(params[:q]['name_cont'])
@@ -22,7 +21,8 @@ class MoviesController < ApplicationController
     #@movies=Movie.all_movies#.order('name').page(params[:page]).per(5)
     #@movies.order('name').paginate(:page => params[:page])
     #@movies=Movie.order("name").page(params[:page]).per(5)
-    @movies=Kaminari.paginate_array(@movie_results).page(params[:page]).per(10)
+    #@movies=Kaminari.paginate_array(@movie_results).page(params[:page]).per(5)
+    @tmdb_movies=Kaminari.paginate_array(@tmdb_movie_results).page(params[:page]).per(5)
   end
 
   def show

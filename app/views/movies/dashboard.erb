@@ -5,8 +5,7 @@
 	  <% @movies.each do |post| %>
 	      <tr>
             <td><%= image_tag post.thumb_url %></td>
-	        <td><%= post.name %></td>
-	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
+	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
 </table>
@@ -18,8 +17,7 @@
 	  <% @movies_men.each do |post| %>
 	      <tr>
             <td><%= image_tag post.thumb_url %></td>
-	        <td><%= post.name %></td>
-	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
+	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
 </table>	  
@@ -31,8 +29,7 @@
 	  <% @movies_women.each do |post| %>
 	      <tr>
             <td><%= image_tag post.thumb_url %></td>
-	        <td><%= post.name %></td>
-	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
+	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
 </table>
@@ -44,8 +41,7 @@
 	<% @movies_youth.each do |post| %>
 	      <tr>
             <td><%= image_tag post.thumb_url %></td>
-	        <td><%= post.name %></td>
-	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
+	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
 </table>
@@ -57,8 +53,7 @@
 	  <% @current_movies.each do |post| %>
 	      <tr>
             <td><%= image_tag post.thumb_url %></td>
-	        <td><%= post.name %></td>
-	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
+	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
 </table>
@@ -70,8 +65,7 @@
 	  <% @movies_dampsquibs.each do |post| %>
 	      <tr>
             <td><%= image_tag post.thumb_url %></td>
-	        <td><%= post.name %></td>
-	        <td><%= link_to '', post,:class => 'icon-arrow-right'%></td>
+	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
 </table>
