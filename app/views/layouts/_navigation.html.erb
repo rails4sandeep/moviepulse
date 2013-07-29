@@ -8,7 +8,7 @@
   <ul class="nav">
     <li class="active"><%= link_to "Home", :controller => "/movies", :action => "dashboard" %></li>
     <li><%= link_to "Search Movies", controller: "/movies", action: "index" %></li>
-    <li><%= link_to "Dashboard", controller: "/movies", action: "dashboard" %></li>
+    <li><%= link_to "Leaderboard", controller: "/movies", action: "dashboard" %></li>
       <% if user_signed_in? %>
         <li>
           <%= link_to "My Reviews", controller: "/reviews", action: "show" %>

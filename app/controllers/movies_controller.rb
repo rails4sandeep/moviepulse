@@ -63,16 +63,21 @@ class MoviesController < ApplicationController
   end
 
   def create_from_tmdb
-    @movie = Movie.new
-    @movie.name=movie_title(params[:id])
-    @movie.tmdb_id=params[:id]
-
+    if Movie.where(:tmdb_id => params[:id]).empty?
+      @movie = Movie.new
+      @movie.name=movie_title(params[:id])
+      @movie.tmdb_id=params[:id]
       if @movie.save
         flash[:notice] = 'Movie was successfully created.'
         redirect_to :action => "show", :id => @movie.id
       else
         render :action => "index"
       end
+    else
+      @movie=Movie.where(:tmdb_id => params[:id]).first
+      redirect_to :action => "show", :id => @movie.id
+    end  
+
   end
 
   def dashboard
