@@ -3,14 +3,9 @@
 <%= paginate @movies %>
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies.each do |post| %>
-	      <tr>
-	      	<% if !post.thumb_url.nil? %>
-            <td><%= image_tag post.thumb_url %></td>
-            <% else %>
-            <td><b>No image available</b></td>
-            <% end %>
+	  	<tr>
 	        <td><%= link_to "#{post.name}", post %></td>
-	      </tr>
+	    </tr>
 	  <% end %>
 </table>
 </table>
@@ -19,14 +14,9 @@
 <tr><th>Top Rated by Men</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies_men.each do |post| %>
-	      <tr>
-	      	<% if !post.thumb_url.nil? %>
-            <td><%= image_tag post.thumb_url %></td>
-            <% else %>
-            <td><b>No image available</b></td>
-            <% end %>
+	  	<tr>
 	        <td><%= link_to "#{post.name}", post %></td>
-	      </tr>
+	    </tr>
 	  <% end %>
 </table>	  
 </table>
@@ -35,14 +25,9 @@
 <tr><th>Top Rated by Women</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies_women.each do |post| %>
-	      <tr>
-	      	<% if !post.thumb_url.nil? %>
-            <td><%= image_tag post.thumb_url %></td>
-            <% else %>
-            <td><b>No image available</b></td>
-            <% end %>
+	  	<tr>
 	        <td><%= link_to "#{post.name}", post %></td>
-	      </tr>
+	    </tr>
 	  <% end %>
 </table>
 </table>
@@ -52,11 +37,6 @@
 <table class="table table-bordered table-condensed table-striped">	
 	<% @movies_youth.each do |post| %>
 	      <tr>
-	      	<% if !post.thumb_url.nil? %>
-            <td><%= image_tag post.thumb_url %></td>
-            <% else %>
-            <td><b>No image available</b></td>
-            <% end %>
 	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
@@ -68,11 +48,6 @@
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @current_movies.each do |post| %>
 	      <tr>
-	      	<% if !post.thumb_url.nil? %>
-            <td><%= image_tag post.thumb_url %></td>
-            <% else %>
-            <td><b>No image available</b></td>
-            <% end %>
 	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
@@ -84,11 +59,6 @@
 <table class="table table-bordered table-condensed table-striped">	
 	  <% @movies_dampsquibs.each do |post| %>
 	      <tr>
-	      	<% if !post.thumb_url.nil? %>
-            <td><%= image_tag post.thumb_url %></td>
-            <% else %>
-            <td><b>No image available</b></td>
-            <% end %>
 	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
