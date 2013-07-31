@@ -30,3 +30,8 @@ body {
 .well{
    background-color:#605884;
   }
+
+footer { 
+	text-align: center;
+    padding-top: 225px; 
+} 

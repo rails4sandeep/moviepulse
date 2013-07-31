@@ -12,6 +12,7 @@
     <%= yield(:head) %>
   </head>
   <body>
+   
     <header class="navbar navbar-fixed-top navbar-inverse">
       <nav class="navbar-inner">
         <div class="container">
@@ -32,7 +33,17 @@
           <footer>
           </footer>
         </div>
+        
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
+  <div>
+    <footer class="footer">
+        <%= link_to "FAQ" %>
+        <%= link_to "Terms" %>
+        <%= link_to "Privacy" %>
+        <%= link_to "Credits" %>
+        @2013 Movie Pulse
+    </footer> 
+  </div>
   </body>
 </html>
