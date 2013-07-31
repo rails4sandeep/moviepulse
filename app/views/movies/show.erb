@@ -1,13 +1,19 @@
+<div class="row-fluid">
+<div class="span12">
+<div class="span5">
+<table class="table table-bordered table-condensed table-striped">
+  <tr>
+      <td>
+        <%= image_tag @movie.poster_url %>
+    </td>
+  </tr>
+</table>  
+</div>
+
+<div class="span7">
 <table class=" table table-bordered table-condensed table-striped">
   <caption><b>Listing Reviews for Movie</b></caption>
-<!--   <tr><td><%= image_tag @movie.movie_url(:thumb) if @movie.movie? %></td></tr>
- -->  
-  <tr>
-    <!--<%= image_tag @movie.movie_url(:thumb) if @movie.movie? %>-->
-      <td><%= image_tag @movie.poster_url %>
-        <%= @movie.movie %></td></tr>
-    <tr><td></td><b>Name: </b><%= @movie.name %></td>
-  </tr>
+    <tr><td><b>Name:</b><%= @movie.name %></td></tr>
   <tr>
     <td>
         <b>Overall Movie rating: </b>
@@ -26,14 +32,9 @@
   </tr>
   </table>
 
-<div>
-  
-</div>
-
 <% count = 0 %>
 <% @reviews.each do |post| %>
 <table class="table table-bordered table-condensed table-striped">
-  
   <tr><th>Name</th></tr>
   <tr><td><%= @users[count].username %></td></tr>
   <tr><th>Review</th></tr>
@@ -53,8 +54,14 @@
   <% end %>
    <% count = count + 1 %>
 <% end %>
-
+<tr>
+  <td>
+    <div class="btn btn-inverse">
+      <%= link_to "Add your Review", :controller => "reviews", :action => "new",:movie => @movie.id  %>
+    </div>
+  </td>
+</tr>
 </table>
-<div class="btn btn-inverse">
-<%= link_to "Add your Review", :controller => "reviews", :action => "new",:movie => @movie.id  %>
 </div>
+</div>
+</div>  
