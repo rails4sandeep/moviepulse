@@ -4,8 +4,8 @@
   <div>
   <%= search_form_for @search do |f| %>
     <%= f.text_field :name_cont,:class => "search-query" %>
-    <div class="btn btn-inverse"><%= f.submit "Search Movies" %></div>
-    <div>
+    <%= f.submit "Search Movies",:class => "btn btn-inverse" %></div>
+    
       <strong>
       or see what Australia is <%= link_to "liking", controller: "movies", action: "dashboard" %>
     </strong>

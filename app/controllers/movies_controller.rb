@@ -88,7 +88,7 @@ class MoviesController < ApplicationController
     @movies_youth=top_rated_by_youth(25)
     @current_movies=currently_talked_about
     @movies_dampsquibs=damp_squibs
-    #@movies_now_playing=Tmdb::Movie.now_playing
+    @movies_now_playing=now_playing
   end
 
 end

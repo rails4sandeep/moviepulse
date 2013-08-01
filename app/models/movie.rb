@@ -84,6 +84,5 @@ def trailer_url
   @trailer_url='youtube.com/embed/'+trailer
 end
 
-
 end
 

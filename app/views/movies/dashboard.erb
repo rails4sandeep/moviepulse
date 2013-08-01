@@ -1,5 +1,18 @@
 <div class="span2">
 <table>
+<tr><th>Now Playing</th></tr>
+<table class="table table-bordered table-condensed table-striped">	
+	<% @movies_now_playing.each do |post| %>
+	      <tr>
+	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
+	      </tr>
+	  <% end %>
+</table>
+</table>
+</div>
+
+<div class="span2">
+<table>
 <tr><th>Top Rated Now Running</th></tr>
 <%= paginate @movies %>
 <table class="table table-bordered table-condensed table-striped">	
@@ -38,18 +51,6 @@
 </table>
 </div>
 
-<div class="span2">
-<table>
-<tr><th>Top Rated by Youth</th></tr>
-<table class="table table-bordered table-condensed table-striped">	
-	<% @movies_youth.each do |post| %>
-	      <tr>
-	        <td><%= link_to "#{post.name}", post %></td>
-	      </tr>
-	  <% end %>
-</table>
-</table>
-</div>
 
 <div class="span2">
 <table>
