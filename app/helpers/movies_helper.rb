@@ -121,4 +121,8 @@ module MoviesHelper
   	return movies
   end
 
+def movie_title(movie_id)
+    Tmdb::Movie.detail(movie_id).original_title
+  end
+
 end

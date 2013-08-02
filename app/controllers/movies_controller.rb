@@ -91,4 +91,6 @@ class MoviesController < ApplicationController
     @movies_now_playing=now_playing
   end
 
+
+
 end
