@@ -1,0 +1,22 @@
+<h3 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">FAQ</h3>
+<% @faqs.each do |faq| %>
+
+<table>
+  <tr>
+    <td><b><%= faq.question %></b></td>
+  </tr>
+  <tr>
+    <td><%= faq.answer %></td>
+  </tr>
+    <!--td><%= link_to 'Show', faq %></td>
+    <td><%= link_to 'Edit', edit_faq_path(faq) %></td>
+    <td><%= link_to 'Destroy', faq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr-->
+</table>
+<div id="push">
+
+</div>
+<% end %>
+<br />
+
+<!--<%= link_to 'New Faq', new_faq_path %>-->
