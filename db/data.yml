@@ -28,14 +28,14 @@ users:
     - 
     - 
     - 
-    - '3'
-    - '2013-07-29 12:57:32.125814'
-    - '2013-07-29 09:16:37.721331'
+    - '6'
+    - '2013-08-03 07:25:26.041064'
+    - '2013-08-01 11:43:06.232897'
     - 127.0.0.1
     - 127.0.0.1
     - 
     - '2013-07-27 06:40:16.355739'
-    - '2013-07-29 12:57:32.232898'
+    - '2013-08-03 07:25:26.057177'
     - sandeepkuvs
     - '31'
     - male
@@ -4258,3 +4258,123 @@ movies:
     - 
     - '43345'
     - 
+  - - '236'
+    - Freedom Writers
+    - '2013-07-31 11:03:15.460565'
+    - '2013-07-31 11:03:15.460565'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '1646'
+    - 
+  - - '237'
+    - Gallowwalkers
+    - '2013-08-02 14:30:13.519771'
+    - '2013-08-02 14:30:13.519771'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '46429'
+    - 
+  - - '238'
+    - Teen Beach Movie
+    - '2013-08-02 21:55:18.1322'
+    - '2013-08-02 21:55:18.1322'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '177888'
+    - 
+  - - '239'
+    - Red
+    - '2013-08-03 02:15:00.410503'
+    - '2013-08-03 02:15:00.410503'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '39514'
+    - 
+  - - '240'
+    - Europa Report
+    - '2013-08-03 08:12:27.403666'
+    - '2013-08-03 08:12:27.403666'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '174772'
+    - 
+
+---
+faqs:
+  columns:
+  - id
+  - question
+  - answer
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - Why another movie site?
+    - ! 'Instead of being overwhelmed by the amount of marketing material on the internet
+      about movies, we thought about building a site around people who pay the money
+      to watch a movie and their opinions. The next time you are at a multiplex or
+      at a DVD store you can use our dashboard to see what australians are currently
+      talking about.Each review of not more than 140 characters and score out of 5
+      go into the calculations of the leaderboard. '
+    - '2013-08-03 08:19:43.309075'
+    - '2013-08-03 08:19:43.309075'
+  - - '2'
+    - Why do we have to register to rate a movie?
+    - To prevent users of the site from spam and garbage.
+    - '2013-08-03 08:21:34.436934'
+    - '2013-08-03 08:21:34.436934'
+  - - '3'
+    - Why do I have to provide my age,city and country during registration?
+    - Providing these will help us in understanding the movie watching trends and
+      will reflect in the leaderboard.The idea of the site is built around it.By the
+      way we have no interest in sharing your information to anyone.They just go into
+      the algorithm anonymously
+    - '2013-08-03 08:23:55.315323'
+    - '2013-08-03 08:23:55.315323'
+  - - '4'
+    - How do I access Movie Pulse on mobile?
+    - moviepulse.com can be visited on any mobile,tablet or computer.The site is enhanced
+      for easy browsing in all these modes and it will adapt to the screen size when
+      opened.
+    - '2013-08-03 08:41:46.691033'
+    - '2013-08-03 08:41:46.691033'
