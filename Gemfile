@@ -27,6 +27,7 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 #webserver
 #gem 'unicorn'
+gem 'foreman'
 gem 'puma'
 #gem 'passenger'
 #movie database management
