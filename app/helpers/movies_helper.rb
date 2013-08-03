@@ -125,4 +125,8 @@ def movie_title(movie_id)
     Tmdb::Movie.detail(movie_id).original_title
   end
 
+def matching_movie_results(movie_name)
+  Tmdb::Movie.find(movie_name)
+end
+
 end
