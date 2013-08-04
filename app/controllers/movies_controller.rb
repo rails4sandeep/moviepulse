@@ -85,7 +85,7 @@ class MoviesController < ApplicationController
     @movies=Kaminari.paginate_array(Movie.movies_by_average_rating).page(params[:page]).per(10)
     @movies_men=Movie.movies_by_average_rating_men
     @movies_women=Movie.movies_by_average_rating_women
-    @movies_youth=top_rated_by_youth(25)
+    @movies_youth=top_rated_by_youth(40)
     @current_movies=currently_talked_about
     @movies_dampsquibs=damp_squibs
     @movies_now_playing=now_playing

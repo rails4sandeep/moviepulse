@@ -1,9 +1,9 @@
 <h3>Your Reviews</h3>
 <% @count =0 %>
 
-<% @reviews.each do |review| %>
 <table class=" table table-bordered table-condensed table-striped">
   <caption><b>Listing Reviews for User</b></caption>
+<% @reviews.each do |review| %>
   <tr>
   	<td><b>Movie:</b><%= @movies[@count].name %></td>
   </tr>
@@ -23,6 +23,6 @@
         </div>      
   	</td>
   </tr>
-</table>
 <% @count = @count + 1 %>
 <% end %>
+</table>

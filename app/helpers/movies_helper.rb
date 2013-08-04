@@ -50,7 +50,7 @@ module MoviesHelper
 
 	    reviews=Review.where(:rating => [3,4])
 	    reviews.each do |review|
-	    	reviews_men << review if User.find(review.user_id).age.to_i.between?(18,age)
+	    	reviews_men << review if User.find(review.user_id).age.to_i.between?(20,age)
 	    end
 	    reviews_men.each do |review|
 	      movies << Movie.find(review.movie_id)
@@ -64,7 +64,7 @@ module MoviesHelper
 	    movie_hash.each do |x,y|
 	    	movies << x
 	    end	
-	    return movies
+	    return movies[0..4]
 
   end
 
@@ -87,7 +87,7 @@ module MoviesHelper
 	    movie_hash.each do |x,y|
 	    	movies << x
 	    end
-	    return movies	
+	    return movies[0..4]	
   end
 
   def damp_squibs
@@ -106,7 +106,7 @@ module MoviesHelper
 	    movie_hash.each do |x,y|
 	    	movies << x
 	    end	
-	    return movies
+	    return movies[0..4]
   end
 
   def now_playing

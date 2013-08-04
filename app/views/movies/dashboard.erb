@@ -1,17 +1,7 @@
-<div class="span2">
-<table>
-<tr><th>Now Playing</th></tr>
-<table class="table table-bordered table-condensed table-striped">	
-	<% @movies_now_playing.each do |post| %>
-	      <tr>
-	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
-	      </tr>
-	  <% end %>
-</table>
-</table>
-</div>
+<div class="span12">
 
-<div class="span2">
+<div class="span12">
+<div class="span6">
 <table>
 <tr><th>Top Rated Now Running</th></tr>
 <%= paginate @movies %>
@@ -25,7 +15,7 @@
 </table>
 </div>
 
-<div class="span2">
+<div class="span6">
 <table>
 <tr><th>Top Rated by Men</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
@@ -37,8 +27,10 @@
 </table>	  
 </table>
 </div>
+</div>
 
-<div class="span2">
+<div class="span12">
+<div class="span6">
 <table>
 <tr><th>Top Rated by Women</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
@@ -52,7 +44,7 @@
 </div>
 
 
-<div class="span2">
+<div class="span6">
 <table>
 <tr><th>Currently talked about</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
@@ -64,8 +56,10 @@
 </table>
 </table>
 </div>
+</div>
 
-<div class="span2">
+<div class="span12">
+<div class="span6">
 <table>
 <tr><th>Dampsquibs</th></tr>
 <table class="table table-bordered table-condensed table-striped">	
@@ -76,4 +70,35 @@
 	  <% end %>
 </table>
 </table>
+</div>
+
+<div class="span6">
+<table>
+<tr><th>Top Rated Young Adults</th></tr>
+<table class="table table-bordered table-condensed table-striped">	
+	  <% @movies_youth.each do |post| %>
+	      <tr>
+	        <td><%= link_to "#{post.name}", post %></td>
+	      </tr>
+	  <% end %>
+</table>
+</table>
+</div>
+</div>
+
+<div class="span12">
+<div class="span6">
+<table>
+<tr><th>Now Playing</th></tr>
+<table class="table table-bordered table-condensed table-striped">	
+	<% @movies_now_playing.each do |post| %>
+	      <tr>
+	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
+	      </tr>
+	  <% end %>
+</table>
+</table>
+</div>
+</div>
+
 </div>

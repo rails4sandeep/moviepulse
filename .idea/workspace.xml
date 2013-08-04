@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cbcaddd-e4ae-405d-8d0f-86720b60dfc7" name="Default" comment="adding yaml_db support">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="" />
     </list>
     <ignored path="ohmyroots.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -710,14 +710,14 @@
       <method />
     </configuration>
     <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.routes" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.db:reset" />
-      <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: ohmyroots" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="6" class="java.lang.String" itemvalue="Rails.Production: ohmyroots" />
-      <item index="7" class="java.lang.String" itemvalue="Rails.Development: ohmyroots" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: ohmyroots" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: ohmyroots" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.db:reset" />
+      <item index="7" class="java.lang.String" itemvalue="IRB console.Rails console: ohmyroots" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -890,11 +890,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/movies/dashboard.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="6" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.rdoc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="53" selection-start="943" selection-end="992" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/movies_helper.rb">
