@@ -16,3 +16,8 @@
 
 # Ignore application configuration
 /config/application.yml
+
+#ignore dat files
+*.dat
+
+
