@@ -17,7 +17,8 @@
 # Ignore application configuration
 /config/application.yml
 
-#ignore dat files
+#ignore dat & .idea files
 *.dat
+*.idea
 
 
