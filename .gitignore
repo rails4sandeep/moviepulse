@@ -20,5 +20,6 @@
 #ignore dat & .idea files
 *.dat
 *.idea
+*.DS_Store
 
 
