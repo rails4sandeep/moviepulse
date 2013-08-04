@@ -17,7 +17,8 @@
  */
 
 body { 
-    padding-top: 65px; 
+    padding-top: 65px;
+    background-image: url('https://s3-ap-southeast-2.amazonaws.com/moviepulse/background/ricepaper2.png'); 
 } 
 
 .navbar-inner {
