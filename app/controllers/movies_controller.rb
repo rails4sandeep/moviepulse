@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_filter :authenticate_user!, :only => [:new, :create], :except => [:index,:show,:movie,:dashboard,:create_from_tmdb]
+  before_filter :authenticate_admin!, :only => [:new, :create], :except => [:index,:show,:movie,:dashboard,:create_from_tmdb]
   include MoviesHelper
 
   def index
