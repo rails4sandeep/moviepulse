@@ -28,14 +28,14 @@ users:
     - 
     - 
     - 
-    - '6'
+    - '7'
+    - '2013-08-05 04:55:22.925878'
     - '2013-08-03 07:25:26.041064'
-    - '2013-08-01 11:43:06.232897'
     - 127.0.0.1
     - 127.0.0.1
     - 
     - '2013-07-27 06:40:16.355739'
-    - '2013-08-03 07:25:26.057177'
+    - '2013-08-05 04:55:22.961805'
     - sandeepkuvs
     - '31'
     - male
@@ -5743,3 +5743,34 @@ faqs:
       opened.
     - '2013-08-03 08:41:46.691033'
     - '2013-08-03 08:41:46.691033'
+
+---
+admins:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - failed_attempts
+  - unlock_token
+  - locked_at
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - rails4sandeep@gmail.com
+    - $2a$10$6r6A2PXMx7uIku2WWnRyoeF/U7aKY3OrBp0qgCBggrBXadKgS8y.K
+    - '1'
+    - '2013-08-05 04:49:14.511393'
+    - '2013-08-05 04:49:14.511393'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '0'
+    - 
+    - 
+    - '2013-08-05 04:48:09.828112'
+    - '2013-08-05 04:49:14.514003'
