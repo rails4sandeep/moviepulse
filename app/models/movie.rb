@@ -1,7 +1,8 @@
 
 class Movie < ActiveRecord::Base
   attr_accessible :name,:release,:actors,:director,:music,:description,:media,:movie,:poster_url,:thumb_url,:tmdb_id,
-  :movie_description,:movie_tagline,:movie_average_rating,:trailer_url,:movie_average_rating,:movie_au_release_date
+  :movie_description,:movie_tagline,:movie_average_rating,:trailer_url,:movie_average_rating,:movie_au_release_date,
+  :movie_genres,:movie_production_companies,:movie_runtime
   mount_uploader :movie, MovieUploader
   #mount_uploader :remote_movie_url, MovieUploader
   has_many :reviews
@@ -82,6 +83,28 @@ def trailer_url
   configuration = Tmdb::Configuration.new
   trailer=Tmdb::Movie.trailers(self.tmdb_id)['youtube'][0]['source']
   @trailer_url='youtube.com/embed/'+trailer
+end
+
+def movie_genres
+  genres_str=""
+  genres_list=Tmdb::Movie.detail(self.tmdb_id).genres
+  genres_list.each do |genre|
+  genres_str=genres_str+','+ genre['name']
+  end
+  @movie_genres=genres_str[1..-1]
+end
+
+def movie_production_companies
+  prod_companies_str=""
+  companies_list=Tmdb::Movie.detail(self.tmdb_id).production_companies
+  companies_list.each do |company|
+  prod_companies_str=prod_companies_str+','+ company['name']
+  end
+  @movie_production_companies=prod_companies_str[1..-1]
+end
+
+def movie_runtime
+  @movie_runtime=Tmdb::Movie.detail(self.tmdb_id).runtime
 end
 
 end

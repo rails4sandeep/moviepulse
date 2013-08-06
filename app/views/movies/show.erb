@@ -14,6 +14,8 @@
 <table class=" table table-bordered table-condensed table-striped">
   <caption><b>Listing Reviews for Movie</b></caption>
     <tr><td><b>Name:</b><%= @movie.name %></td></tr>
+    <tr><td><b>Description: </b><%= @movie.movie_description %></td></tr>
+  <tr><td><b>Tagline: </b><%= @movie.movie_tagline %></td></tr>
   <tr>
     <td>
         <b>Overall Movie rating: </b>
@@ -24,11 +26,11 @@
         <% end %>
     </td>
   </tr>
+  <tr><td><b>Genres: </b><%= @movie.movie_genres %></td></tr>
   <tr><td><b>Release Date: </b><%= @movie.movie_au_release_date %></td></tr>
   <tr><td><b>Actors: </b><%= @movie.movie_cast %></td></tr>
-  <tr><td><b>Tagline: </b><%= @movie.movie_tagline %></td></tr>
-  <tr><td><b>TMDB Rating: </b><%= @movie.movie_average_rating %></td></tr>
-  <tr><td><b>Description: </b><%= @movie.movie_description %></td></tr>
+  <tr><td><b>Production: </b><%= @movie.movie_production_companies %></td></tr>
+  <tr><td><b>Runtime: </b><%= @movie.movie_runtime %></td></tr>
   </tr>
   </table>
 
