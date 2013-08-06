@@ -1,5 +1,8 @@
 Ohmyroots::Application.routes.draw do
 
+  resources :credits
+
+
   devise_for :admins
 
   resources :faqs

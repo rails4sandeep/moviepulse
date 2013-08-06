@@ -15,6 +15,12 @@ class ReviewsController < ApplicationController
     @review.review=params[:review]
     if @review.save
       flash[:notice] = 'Review successfully added'
+      expire_fragment('top_rated_now_running')
+      expire_fragment('top_rated_men')
+      expire_fragment('top_rated_women')
+      expire_fragment('currently_talked_about')
+      expire_fragment('dampsquibs')
+      expire_fragment('top_rated_youth')
       redirect_to :controller => "movies",:action => "show",:id => @review.movie_id
     else
       @movie=Movie.find(@review.movie_id)
@@ -31,6 +37,12 @@ class ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id])
      if @review.update_attributes(params[:review])
+      expire_fragment('top_rated_now_running')
+      expire_fragment('top_rated_men')
+      expire_fragment('top_rated_women')
+      expire_fragment('currently_talked_about')
+      expire_fragment('dampsquibs')
+      expire_fragment('top_rated_youth')
       redirect_to :controller => "movies", :action => "show", :id => @review.movie_id
     else
       @movie=Movie.find(@review.movie_id)
