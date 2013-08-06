@@ -5774,3 +5774,31 @@ admins:
     - 
     - '2013-08-05 04:48:09.828112'
     - '2013-08-05 04:49:14.514003'
+
+---
+credits:
+  columns:
+  - id
+  - credit
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - This product uses the TMDb API but is not endorsed or certified by TMDb
+    - '2013-08-06 11:49:54.523613'
+    - '2013-08-06 11:49:54.523613'
+  - - '2'
+    - This product is a result of the great work done by the community behind the
+      ruby on rails framework. "Rails", "Ruby on Rails", and the Rails logo are registered
+      trademarks of David Heinemeier Hansson
+    - '2013-08-06 11:59:25.769506'
+    - '2013-08-06 11:59:25.769506'
+  - - '3'
+    - Ruby is copyrighted free software by Yukihiro Matsumoto
+    - '2013-08-06 12:02:05.637381'
+    - '2013-08-06 12:02:05.637381'
+  - - '4'
+    - Twitter Bootstrap is built at twitter and is licensed under Apache License v2.0,
+      documentation under CC BY 3.0. Glyphicons Free licensed under CC BY 3.0.
+    - '2013-08-06 12:06:37.732035'
+    - '2013-08-06 12:06:37.732035'
