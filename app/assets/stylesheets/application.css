@@ -18,7 +18,8 @@
 
 body { 
     padding-top: 65px;
-    background-image: url('https://s3-ap-southeast-2.amazonaws.com/moviepulse/background/white_wall.png'); 
+    background-image: url('https://s3-ap-southeast-2.amazonaws.com/moviepulse/background/white_wall.png');
+    
 } 
 
 .navbar-inner {

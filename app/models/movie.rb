@@ -71,12 +71,8 @@ end
 
 def thumb_url
   configuration = Tmdb::Configuration.new
-  if Tmdb::Movie.images(self.tmdb_id).empty?
-    @thumb_url=nil
-  else
-    image=Tmdb::Movie.images(self.tmdb_id).first
-    @thumb_url=configuration.base_url+'w185'+image['file_path']
-  end  
+  image=Tmdb::Movie.images(self.tmdb_id).first
+  @thumb_url=configuration.base_url+'w154'+Tmdb::Movie.detail(self.tmdb_id).poster_path
 end
 
 def trailer_url

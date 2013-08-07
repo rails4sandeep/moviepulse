@@ -3,12 +3,21 @@
 <div class="navbar-search">
   <div>
   <%= search_form_for @search do |f| %>
-    <%= f.text_field :name_cont,:class => "search-query" %>
-    <%= f.submit "Search Movies",:class => "btn btn-inverse" %></div>
-    
-      <strong>
-      or see what Australia is <%= link_to "liking", controller: "movies", action: "dashboard" %>
-    </strong>
+  <table>
+    <tr>
+      <td>
+        <%= f.text_field :name_cont,:class => "search-query" %>
+        <%= f.submit "Search Movies",:class => "btn btn-inverse" %></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          or see what Australia is <%= link_to "liking", controller: "movies", action: "dashboard" %>
+        </strong>
+      </td>
+    </tr>
+  </table>
   </div>
   <% end %>
 

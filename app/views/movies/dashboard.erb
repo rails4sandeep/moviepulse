@@ -5,10 +5,11 @@
 <table>
 <tr><th>Top Rated Now Running</th></tr>
 <%= paginate @movies %>
-<table class="table table-bordered table-condensed table-striped">
+<table class="table table-condensed">
 	<% cache('top_rated_now_running') do %>		
 	  <% @movies.each do |post| %>
 	  	<tr>
+	  		<td><%= image_tag post.thumb_url %></td>
 	        <td><%= link_to "#{post.name}", post %></td>
 	    </tr>
 	  <% end %>
@@ -20,10 +21,11 @@
 <div class="span6">
 <table>
 <tr><th>Top Rated by Men</th></tr>
-<table class="table table-bordered table-condensed table-striped">
+<table class="table table-condensed">
 	<% cache('top_rated_men') do %>				
 	  <% @movies_men.each do |post| %>
 	  	<tr>
+	  		<td><%= image_tag post.thumb_url %></td>
 	        <td><%= link_to "#{post.name}", post %></td>
 	    </tr>
 	  <% end %>
@@ -37,10 +39,11 @@
 <div class="span6">
 <table>
 <tr><th>Top Rated by Women</th></tr>
-<table class="table table-bordered table-condensed table-striped">
+<table class="table table-condensed">
 	 <% cache('top_rated_women') do %>				
 	  <% @movies_women.each do |post| %>
 	  	<tr>
+	  		<td><%= image_tag post.thumb_url %></td>
 	        <td><%= link_to "#{post.name}", post %></td>
 	    </tr>
 	  <% end %>
@@ -53,10 +56,11 @@
 <div class="span6">
 <table>
 <tr><th>Currently talked about</th></tr>
-<table class="table table-bordered table-condensed table-striped">
+<table class="table table-condensed">
 	<% cache('currently_talked_about') do %>				
 	  <% @current_movies.each do |post| %>
 	      <tr>
+	  		<td><%= image_tag post.thumb_url %></td>
 	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
@@ -70,10 +74,11 @@
 <div class="span6">
 <table>
 <tr><th>Dampsquibs</th></tr>
-<table class="table table-bordered table-condensed table-striped">	
+<table class="table table-condensed">
 	<% cache('dampsquibs') do %>		
 	  <% @movies_dampsquibs.each do |post| %>
 	      <tr>
+	  		<td><%= image_tag post.thumb_url %></td>
 	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
@@ -85,10 +90,11 @@
 <div class="span6">
 <table>
 <tr><th>Top Rated Young Adults</th></tr>
-<table class="table table-bordered table-condensed table-striped">	
+<table class="table table-condensed">
 	<% cache('top_rated_youth') do %>		
 	  <% @movies_youth.each do |post| %>
 	      <tr>
+	  		<td><%= image_tag post.thumb_url %></td>
 	        <td><%= link_to "#{post.name}", post %></td>
 	      </tr>
 	  <% end %>
@@ -102,7 +108,7 @@
 <div class="span6">
 <table>
 <tr><th>Now Playing</th></tr>
-<table class="table table-bordered table-condensed table-striped">
+<table class="table table-condensed">
 	<% cache('now_playing') do %>			
 	<% @movies_now_playing.each do |post| %>
 	      <tr>
@@ -114,4 +120,5 @@
 </table>
 </div>
 </div>
+
 </div>

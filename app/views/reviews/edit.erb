@@ -1,13 +1,24 @@
 <h3><%= @movie.name %></h3>
 
-
- <%= form_for @review do |f| %>
- <%= render "shared/error_messages", :target => @review %>
-   <%= f.label :rating, "Rate the movie" %>
-   <%= f.select :rating,['1','2','3','4','5'] %>
-   <%= f.label :review, "Your 140 character review" %>
-   <%= f.text_area :review %>
-   <%= f.submit "Fire", :disable_with => 'Submitting...',:class => "btn btn-inverse" %>
- <% end %>
-
-
+<%= form_for @review do |f| %>
+<%= render "shared/error_messages", :target => @review %>
+<table  class="table">
+	<tr>
+		<td>
+		   <%= f.label :rating, "Rate the movie" %>
+   		   <%= f.select :rating,['1','2','3','4','5'] %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		   <%= f.label :review, "Your 140 character review" %>
+   			<%= f.text_area :review,:class => "span3" %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.submit "GO", :disable_with => 'Submitting...',:class => "btn btn-inverse" %>
+		</td>
+	</tr>
+</table>
+<% end %>
