@@ -72,7 +72,7 @@ end
 def thumb_url
   configuration = Tmdb::Configuration.new
   image=Tmdb::Movie.images(self.tmdb_id).first
-  @thumb_url=configuration.base_url+'w154'+Tmdb::Movie.detail(self.tmdb_id).poster_path
+  @thumb_url=configuration.base_url+'w92'+Tmdb::Movie.detail(self.tmdb_id).poster_path
 end
 
 def trailer_url
