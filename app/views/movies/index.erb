@@ -1,13 +1,12 @@
 <div class="span12">
 <div class="span6">  
 <div class="navbar-search">
-  <div>
   <%= search_form_for @search do |f| %>
   <table>
     <tr>
       <td>
         <%= f.text_field :name_cont,:class => "search-query" %>
-        <%= f.submit "Search Movies",:class => "btn btn-inverse" %></div>
+        <%= f.submit "Search Movies",:class => "btn btn-inverse" %>
       </td>
     </tr>
     <tr>
@@ -18,8 +17,8 @@
       </td>
     </tr>
   </table>
-  </div>
-  <% end %>
+
+<% end %>
 
   <% if !@movie_results.empty? %>
   
@@ -37,7 +36,7 @@
   <%= paginate @movies %>
   </div>
 <% end %>
-
+</div>
 
 
 <% if !@tmdb_movie_results.empty? %>

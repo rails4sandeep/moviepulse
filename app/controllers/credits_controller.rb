@@ -1,4 +1,5 @@
 class CreditsController < ApplicationController
+  before_filter :authenticate_admin!, :only => [:new, :edit,:destroy], :except => [:index]
   # GET /credits
   # GET /credits.json
   def index
