@@ -6,7 +6,7 @@
 <tr><th>Top Rated Now Running</th></tr>
 <%= paginate @movies %>
 <table class="table table-condensed">
-	<% cache('top_rated_now_running') do %>		
+	<% cache('top_rated_now_running',:expires_in => 1.hour) do %>		
 	<tr>
 	  <% @movies.each do |post| %>
 	  		<td><%= image_tag post.thumb_url %>
@@ -22,7 +22,7 @@
 <table>
 <tr><th>Top Rated by Men</th></tr>
 <table class="table table-condensed">
-	<% cache('top_rated_men') do %>				
+	<% cache('top_rated_men',:expires_in => 1.hour) do %>				
 <tr>
 	  <% @movies_men.each do |post| %>
 	  		<td><%= image_tag post.thumb_url %>
@@ -40,7 +40,7 @@
 <table>
 <tr><th>Top Rated by Women</th></tr>
 <table class="table table-condensed">
-	 <% cache('top_rated_women') do %>				
+	 <% cache('top_rated_women',:expires_in => 1.hour) do %>				
 	  <tr>
 	  <% @movies_women.each do |post| %>
 	  		<td><%= image_tag post.thumb_url %>
@@ -57,7 +57,7 @@
 <table>
 <tr><th>Currently talked about</th></tr>
 <table class="table table-condensed">
-	<% cache('currently_talked_about') do %>				
+	<% cache('currently_talked_about',:expires_in => 10.minutes) do %>				
 	<tr>
 	  <% @current_movies.each do |post| %>
 	  		<td><%= image_tag post.thumb_url %>
@@ -75,7 +75,7 @@
 <table>
 <tr><th>Dampsquibs</th></tr>
 <table class="table table-condensed">
-	<% cache('dampsquibs') do %>		
+	<% cache('dampsquibs',:expires_in => 1.hour) do %>		
 	<tr>  
 	  <% @movies_dampsquibs.each do |post| %>
 	      
@@ -93,7 +93,7 @@
 <table>
 <tr><th>Top Rated Young Adults</th></tr>
 <table class="table table-condensed">
-	<% cache('top_rated_youth') do %>		
+	<% cache('top_rated_youth',:expires_in => 1.hour) do %>		
 	<tr>  
 	  <% @movies_youth.each do |post| %>
 	     
@@ -113,7 +113,7 @@
 <table>
 <tr><th>Now Playing</th></tr>
 <table class="table table-condensed">
-	<% cache('now_playing') do %>			
+	<% cache('now_playing',:expires_in => 6.hour) do %>			
 	<% @movies_now_playing.each do |post| %>
 	      <tr>
 	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
