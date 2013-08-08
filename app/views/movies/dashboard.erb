@@ -4,33 +4,38 @@
 <div class="span6">
 <table>
 <tr><th>Top Rated Now Running</th></tr>
-<%= paginate @movies %>
-<table class="table table-condensed">
-	<% cache('top_rated_now_running',:expires_in => 1.hour) do %>		
-	<tr>
+<% cache('top_rated_now_running',:expires_in => 1.hour) do %>				
+<!--%= paginate @movies %-->
+	<table class="table table-condensed">
+	<tr>		
 	  <% @movies.each do |post| %>
-	  		<td><%= image_tag post.thumb_url %>
-	        <%= link_to "#{post.name}", post %></td>
+	  	<% if post.thumb_url.empty? %>
+	  	<td><%= link_to "#{post.name}", post %></td>
+	  	<% else %>	
+	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
+	  	<% end %>
 	  <% end %>
-	 </tr>
-	  <% end %>
-</table>
+	 </tr> 
+	</table>      
+	 <% end %>
 </table>
 </div>
 
 <div class="span6">
 <table>
 <tr><th>Top Rated by Men</th></tr>
-<table class="table table-condensed">
+
 	<% cache('top_rated_men',:expires_in => 1.hour) do %>				
-<tr>
+	<table class="table table-condensed">
+	<tr>		
 	  <% @movies_men.each do |post| %>
-	  		<td><%= image_tag post.thumb_url %>
-	  		<%= link_to "#{post.name}", post %></td>
+	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
 	  <% end %>
-</tr>	  
+	 </tr> 
+	 
+	</table>      
 	  <% end %>
-</table>	  
+
 </table>
 </div>
 </div>
@@ -39,16 +44,16 @@
 <div class="span6">
 <table>
 <tr><th>Top Rated by Women</th></tr>
-<table class="table table-condensed">
+
 	 <% cache('top_rated_women',:expires_in => 1.hour) do %>				
-	  <tr>
+	<table class="table table-condensed">
+	<tr>		
 	  <% @movies_women.each do |post| %>
-	  		<td><%= image_tag post.thumb_url %>
-	        <%= link_to "#{post.name}", post %></td>
+	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
 	  <% end %>
-	  </tr>
-	  <% end %>
-</table>
+	 </tr> 
+	</table>      
+	<% end %>
 </table>
 </div>
 
@@ -56,16 +61,18 @@
 <div class="span6">
 <table>
 <tr><th>Currently talked about</th></tr>
-<table class="table table-condensed">
+
 	<% cache('currently_talked_about',:expires_in => 10.minutes) do %>				
-	<tr>
+	<table class="table table-condensed">
+	<tr>		
 	  <% @current_movies.each do |post| %>
-	  		<td><%= image_tag post.thumb_url %>
-	        <%= link_to "#{post.name}", post %></td>
+	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
 	  <% end %>
-	</tr>  
-	  <% end %>
-</table>
+	 </tr> 
+	
+	</table>      
+	 <% end %>  
+
 </table>
 </div>
 </div>
@@ -74,36 +81,36 @@
 <div class="span6">
 <table>
 <tr><th>Dampsquibs</th></tr>
-<table class="table table-condensed">
+
 	<% cache('dampsquibs',:expires_in => 1.hour) do %>		
-	<tr>  
+	<table class="table table-condensed">
+	<tr>		
 	  <% @movies_dampsquibs.each do |post| %>
-	      
-	  		<td><%= image_tag post.thumb_url %>
-	        <%= link_to "#{post.name}", post %></td>
-	      
+	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
 	  <% end %>
-	</tr>  
-	  <% end %>
-</table>
+	 </tr> 
+	
+	</table>      
+	 <% end %>  
+
 </table>
 </div>
 
 <div class="span6">
 <table>
 <tr><th>Top Rated Young Adults</th></tr>
-<table class="table table-condensed">
+
 	<% cache('top_rated_youth',:expires_in => 1.hour) do %>		
-	<tr>  
+	<table class="table table-condensed">
+	<tr>		
 	  <% @movies_youth.each do |post| %>
-	     
-	  		<td><%= image_tag post.thumb_url %>
-	        <%= link_to "#{post.name}", post %></td>
-	     
+	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
 	  <% end %>
-	</tr>  
-	  <% end %> 
-</table>
+	 </tr> 
+	
+	</table>      
+	 <% end %>
+
 </table>
 </div>
 </div>
@@ -124,5 +131,4 @@
 </table>
 </div>
 </div>
-
 </div>

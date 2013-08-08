@@ -228,3 +228,6 @@ Nymphomaniac
 Nurse 3D
 Diana
 Foxcatcher
+
+	<!--<% cache('top_rated_now_running',:expires_in => 1.hour) do %>-->		
+	 <!--<% end %>-->
