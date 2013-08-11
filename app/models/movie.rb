@@ -2,7 +2,7 @@
 class Movie < ActiveRecord::Base
   attr_accessible :name,:release,:actors,:director,:music,:description,:media,:movie,:poster_url,:thumb_url,:tmdb_id,
   :movie_description,:movie_tagline,:movie_average_rating,:trailer_url,:movie_average_rating,:movie_au_release_date,
-  :movie_genres,:movie_production_companies,:movie_runtime
+  :movie_genres,:movie_production_companies,:movie_runtime,:now_playing_au
   mount_uploader :movie, MovieUploader
   #mount_uploader :remote_movie_url, MovieUploader
   has_many :reviews

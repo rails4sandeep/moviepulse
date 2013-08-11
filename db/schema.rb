@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806114512) do
+ActiveRecord::Schema.define(:version => 20130809125212) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",              :default => "", :null => false
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20130806114512) do
     t.integer  "average_rating_women"
     t.integer  "tmdb_id"
     t.string   "poster_url"
+    t.integer  "now_playing_au"
   end
 
   create_table "reviews", :force => true do |t|

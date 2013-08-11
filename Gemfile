@@ -36,6 +36,8 @@ gem 'themoviedb'
 gem 'yaml_db'
 #configuration data management
 gem 'figaro'
+#google adsense
+gem 'ads-rails'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

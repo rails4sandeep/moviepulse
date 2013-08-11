@@ -7,6 +7,11 @@
         <%= image_tag @movie.poster_url %>
     </td>
   </tr>
+      <% if admin_signed_in? %>
+  <tr>  
+        <td><%= link_to 'Edit Movie', edit_movie_path(@movie),:class => "btn btn-inverse" %></td>
+  </tr>
+      <% end %>
 </table>  
 </div>
 

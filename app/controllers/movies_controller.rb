@@ -91,6 +91,18 @@ class MoviesController < ApplicationController
     @movies_now_playing=now_playing
   end
 
+  def edit
+    @movie = Movie.find(params[:id])
+  end
 
+    def update
+    @movie = Movie.find(params[:id])
+      if @movie.update_attributes(params[:movie])
+        redirect_to @movie, notice: 'Movie was successfully updated.' 
+      else
+        render action: "edit"
+      end
+    
+  end
 
 end

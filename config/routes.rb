@@ -11,11 +11,11 @@ Ohmyroots::Application.routes.draw do
   root to: "movies#index"
   match 'movies/dashboard', :to => 'movies#dashboard'
   match 'reviews/show', :to => 'reviews#show'
+
   resources :reviews
   resources :movies
   devise_for :users
   match 'show/:id', :to => 'movies#show'
-
 
 
   # The priority is based upon order of creation:

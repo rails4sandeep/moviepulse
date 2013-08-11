@@ -30,6 +30,9 @@
   <% @movies.each do |post| %>
       <tr>
         <td><%= link_to "#{post.name}", post %></td>
+        <% if admin_signed_in? %>
+        <td><%= link_to 'Edit', edit_movie_path(post),:class => "btn btn-inverse" %></td>
+        <% end %>
       </tr>
   <% end %>
   </table>
