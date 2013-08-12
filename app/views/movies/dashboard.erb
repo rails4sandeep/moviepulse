@@ -121,7 +121,7 @@
 <table>
 <tr><th>Now Playing Australia</th></tr>
 <table class="table table-condensed">
-	<% cache('now_playing_au',:expires_in => 24.hour) do %>			
+	<% cache('now_playing_au',:expires_in => 3.hour) do %>			
 	<% @movies_now_playing_au.each do |post| %>
 	      <tr>
 	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
@@ -131,7 +131,7 @@
 </table>
 </table>
 </div>
-	
+
 <div class="span6">
 <table>
 <tr><th>Now Playing</th></tr>
