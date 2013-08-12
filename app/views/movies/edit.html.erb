@@ -1,0 +1,18 @@
+<%= form_for(@movie) do |f| %>
+<table>
+	<tr>
+		<td>
+		  <%= f.label :name, "Name" %>
+  		  <%= f.text_field :name %>
+		</td>
+	</tr>
+	<tr>
+		<td><%= f.check_box :now_playing_au %>
+		<%= f.label :now_playing_au, "Now Playing Australia" %></td>
+	</tr>
+	<tr>
+		<td><%= f.submit "Save", :disable_with => 'Saving...' %></td>
+	</tr>
+</table>
+
+<% end %>

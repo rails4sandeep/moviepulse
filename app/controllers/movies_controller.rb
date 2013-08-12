@@ -68,7 +68,7 @@ class MoviesController < ApplicationController
       @movie.name=movie_title(params[:id])
       @movie.tmdb_id=params[:id]
       if @movie.save
-        flash[:notice] = 'Movie was successfully created.'
+        #flash[:notice] = 'Movie was successfully created.'
         redirect_to :action => "show", :id => @movie.id
       else
         render :action => "index"
@@ -89,6 +89,7 @@ class MoviesController < ApplicationController
     @current_movies=currently_talked_about
     @movies_dampsquibs=damp_squibs
     @movies_now_playing=now_playing
+    @movies_now_playing_au=Movie.movies_now_playing_australia
   end
 
   def edit
