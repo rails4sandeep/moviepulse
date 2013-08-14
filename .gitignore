@@ -15,7 +15,7 @@
 /tmp
 
 # Ignore application configuration
-/config/application.yml
+#/config/application.yml
 
 #ignore dat & .idea files
 *.dat
