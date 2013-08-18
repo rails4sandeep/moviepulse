@@ -1,17 +1,12 @@
 <div class="row-fluid">
 <div class="span12">
 <div class="span5">
-<table class="table table-bordered table-condensed table-striped">
+<table>
   <tr>
       <td>
         <%= image_tag @movie.poster_url %>
     </td>
   </tr>
-      <% if admin_signed_in? %>
-  <tr>  
-        <td><%= link_to 'Edit Movie', edit_movie_path(@movie),:class => "btn btn-inverse" %></td>
-  </tr>
-      <% end %>
 </table>  
 </div>
 
@@ -51,10 +46,10 @@
     <% if user_signed_in? %>
     <% if @users[count].email == current_user.email %>
       <tr><td>
-        <div class="btn btn-inverse">
+        <div class="btn">
           <%= link_to "Edit", :controller => "reviews", :action => "edit", :id => post.id %>
         </div>
-        <div class="btn btn-inverse">
+        <div class="btn">
           <%= link_to 'Destroy', post, :confirm => 'Are you sure?',:method => :delete %></td></tr>    
         </div>      
     <% end %>
@@ -63,11 +58,16 @@
 <% end %>
 <tr>
   <td>
-    <div class="btn btn-inverse">
+    <div class="btn">
       <%= link_to "Add your Review", :controller => "reviews", :action => "new",:movie => @movie.id  %>
     </div>
   </td>
 </tr>
+      <% if admin_signed_in? %>
+  <tr>  
+        <td><%= link_to 'Edit Movie', edit_movie_path(@movie),:class => "btn btn-inverse" %></td>
+  </tr>
+      <% end %>
 </table>
 </div>
 </div>
