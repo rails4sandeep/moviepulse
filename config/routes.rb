@@ -10,6 +10,7 @@ Ohmyroots::Application.routes.draw do
 
   root to: "movies#index"
   match 'movies/dashboard', :to => 'movies#dashboard'
+  match 'movies/upload', :to => 'movies#upload'
   match 'reviews/show', :to => 'reviews#show'
 
   resources :reviews

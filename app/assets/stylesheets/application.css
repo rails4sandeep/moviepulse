@@ -12,9 +12,9 @@
  *= require_tree .
  */
 
-/*
- *= require bootstrap_and_overrides
- */
+
+
+
 
 body { 
     padding-top: 130px;
@@ -58,7 +58,7 @@ body {
            height: 60px;
          }
          #footer {
-           //background-color: #2c2c2c;
+           background-color: #2c2c2c;
          }
 
          /* Lastly, apply responsive CSS fixes as necessary */

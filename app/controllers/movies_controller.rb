@@ -17,10 +17,6 @@ class MoviesController < ApplicationController
     else   
       @tmdb_movie_results=matching_movie_results(params[:q]['name_cont'])
     end
-    #@movies = @q.result(:distinct => true)
-    #@movies=Movie.all_movies#.order('name').page(params[:page]).per(5)
-    #@movies.order('name').paginate(:page => params[:page])
-    #@movies=Movie.order("name").page(params[:page]).per(5)
     @movies=Kaminari.paginate_array(@movie_results).page(params[:page]).per(5)
     @tmdb_movies=Kaminari.paginate_array(@tmdb_movie_results).page(params[:page]).per(5)
   end
@@ -96,13 +92,47 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
-    def update
+  def update
     @movie = Movie.find(params[:id])
       if @movie.update_attributes(params[:movie])
         redirect_to @movie, notice: 'Movie was successfully updated.' 
       else
         render action: "edit"
       end
+    
+  end
+
+  def import
+    logger.debug("inside movies import--->#{params[:file].inspect}")
+    require 'csv'
+    @lines = []
+    Movie.update_all("now_playing_au=0")
+    uploaded_io=params[:file]
+    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'w') do |file|
+        file.write(uploaded_io.read)
+      end
+    File.foreach(Rails.root.join('public', 'uploads', uploaded_io.original_filename)){|line| logger.debug line}
+    lines=IO.readlines(Rails.root.join('public', 'uploads', uploaded_io.original_filename))
+    lines.each{|l| logger.debug l}
+      lines.each do |line|
+      movie_id=line.split(',').first
+      movie_name=line.split(',').last
+      if Movie.where(:tmdb_id => movie_id).empty?
+        @movie=Movie.new
+        @movie.tmdb_id=movie_id
+        @movie.name=movie_name
+        @movie.now_playing_au=1
+        @movie.save
+      else
+        @movie=Movie.where(:tmdb_id => movie_id).first
+        @movie.now_playing_au=1
+        @movie.save
+      end
+    end
+    redirect_to action: "index", notice: 'Australia Movie Release Data Imported'
+  end
+
+  def upload
     
   end
 
