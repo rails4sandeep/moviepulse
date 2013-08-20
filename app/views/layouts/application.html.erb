@@ -11,11 +11,6 @@
     <!--[if lt IE 9]>
     <script src="components/html5shiv/html5shiv.js"></script>
     <![endif]-->
-    <style type="text/css">
-      body { 
-            //background: #2a333c;
-          }
-    </style>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
@@ -34,11 +29,11 @@
       <div class="container-fluid">
         <div class="content">
            <div class="row">
-            <div class="span10">
+            <div class="span9">
               <%= render 'layouts/messages' %>
               <%= yield %>
             </div>
-            <div class="span2">
+            <div class="span3">
               <!--<%= google_adsense_include_tag client: 'ca-pub-2003857859925620', slot: '7152347448', width: '160', height: '600' %>
               <%= google_adsense_include_tag client: 'ca-pub-2003857859925620', slot: '2582547046', width: '300', height: '250' %>-->
             </div>
