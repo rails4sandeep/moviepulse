@@ -28,8 +28,8 @@ gem "twitter-bootstrap-rails"
 #webserver
 #gem 'unicorn'
 gem 'foreman'
-gem 'puma'
-#gem 'passenger'
+#gem 'puma'
+gem 'passenger'
 #movie database management
 gem 'themoviedb'
 #database dumps
