@@ -11,11 +11,15 @@
     <!--[if lt IE 9]>
     <script src="components/html5shiv/html5shiv.js"></script>
     <![endif]-->
+    <script type="text/javascript">  
+        $(document).ready(function () {  
+            $('.dropdown-toggle').dropdown();  
+        });  
+   </script>  
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
   <body>
-   
     <header class="navbar navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
