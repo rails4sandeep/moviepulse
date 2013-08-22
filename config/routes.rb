@@ -15,7 +15,9 @@ Ohmyroots::Application.routes.draw do
 
   resources :reviews
   resources :movies
+  devise_for :users, :controllers => { :registrations => "registrations" }
   devise_for :users
+
   match 'show/:id', :to => 'movies#show'
 
 
