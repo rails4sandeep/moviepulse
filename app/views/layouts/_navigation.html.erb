@@ -35,9 +35,28 @@
           <%= link_to('Login', new_user_session_path)  %>
         </li>
       <% end %>
-        <li>
-          <%= link_to "Why",controller: "/faqs",action: "index" %>
-        </li>
+      <li class="dropdown">
+      <a class="dropdown-toggle"
+      data-toggle="dropdown"
+      href="#">
+      About
+      <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+            <li>
+              <%= link_to "FAQ",controller: "/faqs",action: "index" %>
+            </li>
+            <li>
+              <%= link_to "Terms" %>
+            </li>
+            <li>
+              <%= link_to "Privacy" %>
+            </li>
+            <li>
+              <%= link_to "Credits",controller: "/credits",action: "index" %>
+            </li>
+      </ul>
+      </li>
       <% if admin_signed_in? %>
 			<li class="dropdown">
 			<a class="dropdown-toggle"
@@ -64,4 +83,12 @@
       <% end %>
   </ul>
 </div>
+
+
+
+
+
+
+
+
 
