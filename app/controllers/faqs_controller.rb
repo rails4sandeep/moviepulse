@@ -1,5 +1,5 @@
 class FaqsController < ApplicationController
-  before_filter :authenticate_admin!, :only => [:new, :edit,:destroy], :except => [:index]
+  before_filter :authenticate_admin!, :only => [:new, :edit,:destroy], :except => [:index,:privacy]
   # GET /faqs
   # GET /faqs.json
   def index
@@ -81,4 +81,8 @@ class FaqsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def privacy
+  end
+  
 end

@@ -4,7 +4,7 @@ Ohmyroots::Application.routes.draw do
 
 
   devise_for :admins
-
+match 'faqs/privacy', :to => 'faqs#privacy'
   resources :faqs
 
 
@@ -19,8 +19,7 @@ Ohmyroots::Application.routes.draw do
   devise_for :users
 
   match 'show/:id', :to => 'movies#show'
-
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
