@@ -66,13 +66,18 @@ end
 
 def poster_url
   configuration = Tmdb::Configuration.new
-  @poster_url=configuration.base_url+'w342'+Tmdb::Movie.detail(self.tmdb_id).poster_path
+  if Tmdb::Movie.detail(self.tmdb_id).poster_path.nil?
+    poster_path=''
+  else
+    poster_path=Tmdb::Movie.detail(self.tmdb_id).poster_path
+  end  
+    @poster_url=configuration.base_url+'w342'+poster_path
 end
 
 def thumb_url
   configuration = Tmdb::Configuration.new
   if Tmdb::Movie.detail(self.tmdb_id).poster_path.nil?
-    @thumb_url=''
+    @thumb_url=configuration.base_url+'w154'+''
   else  
     @thumb_url=configuration.base_url+'w154'+Tmdb::Movie.detail(self.tmdb_id).poster_path
   end  
