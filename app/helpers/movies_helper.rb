@@ -113,10 +113,12 @@ module MoviesHelper
   	movies=Array.new
   	@now_playing=Tmdb::Movie.now_playing
   	@now_playing.each do |movie|
-  		movie_hash=Hash.new
-  		movie_hash[:name]=movie['original_title']
-  		movie_hash[:tmdb_id]=movie['id']
-  		movies << movie_hash
+  		begin
+	  		movie_hash=Hash.new
+  			movie_hash[:name]=movie['original_title']
+  			movie_hash[:tmdb_id]=movie['id']
+  			movies << movie_hash
+  		end unless movie.nil?
   	end
   	return movies
   end
