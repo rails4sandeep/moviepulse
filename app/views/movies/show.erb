@@ -20,7 +20,7 @@
     <td>
         <b>Overall Movie rating: </b>
         <% if @average_movie_rating.nil? %>
-          <b>Not enough ratings received</b>
+          <%= @movie.movie_average_rating %> (TMDB community rating)
         <% else %>
           <%= @average_movie_rating %>
         <% end %>
