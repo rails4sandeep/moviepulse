@@ -80,6 +80,7 @@ GEM
       thor (>= 0.13.6)
       win32console (~> 1.3.0)
     formatador (0.2.4)
+    google-analytics-rails (0.0.4)
     gotcha (0.0.6)
     hike (1.2.3)
     httparty (0.11.0)
@@ -205,6 +206,7 @@ DEPENDENCIES
   figaro
   fog
   foreman
+  google-analytics-rails
   gotcha
   jquery-rails
   kaminari

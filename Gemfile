@@ -45,6 +45,8 @@ gem 'memcache-client'
 #gem 'sqlite3'
 #gem 'mysql2'
 gem 'pg'
+#google analytics
+gem 'google-analytics-rails'
 
 
 # Gems used only for assets and not required
