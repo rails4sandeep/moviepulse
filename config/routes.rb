@@ -8,7 +8,7 @@ match 'faqs/privacy', :to => 'faqs#privacy'
   resources :faqs
 
 
-  root to: "movies#index"
+  root to: "movies#dashboard"
   match 'movies/dashboard', :to => 'movies#dashboard'
   match 'movies/upload', :to => 'movies#upload'
   match 'reviews/show', :to => 'reviews#show'
