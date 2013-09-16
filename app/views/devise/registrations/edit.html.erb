@@ -1,40 +1,67 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<style type="text/css">
+body { 
+    background-image: url('https://s3-ap-southeast-2.amazonaws.com/moviepulse/background/background.jpg'); 
+    background-repeat: no-repeat;
+} 
+</style>
+
+<h3 align="center">Edit <%= resource_name.to_s.humanize %></h3>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <table align="center">
+  <tr>
+    <td><%= f.label :email %></td>
+    <td><%= f.email_field :email, :autofocus => true %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :password %></td>
+    <td><%= f.password_field :password %></td>
+  </tr>
+    <tr>
+    <td><%= f.label :password_confirmation %></td>
+    <td><%= f.password_field :password_confirmation %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :username %></td>
+    <td><%= f.text_field :username %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :age %></td>
+    <td><%= f.select(:age, (18..99).to_a) %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :sex %></td>
+    <td><%= f.select :sex,['male','female'] %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :city %></td>
+    <td><%= f.text_field :city %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :country %></td>
+    <td><%= f.country_select :country,["Australia","New Zealand"] %></td>
+  </tr>
+  <tr>
+    <td><%= f.submit "Update",:class => "btn btn-large btn-primary" %></td>
+  </tr>
+  </table>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
-
-  <div><%= f.label :age %><br />
-  <%= f.select(:age, (18..99).to_a) %></div>
-
-  <div><%= f.label :sex %>
-
-  <%= f.select :sex,['male','female'] %>
-  </div>
-
-    <div><%= f.label :city %><br />
-  <%= f.text_field :city %></div>
-
-  <div><%= f.label :country %><br />
-
-  <%= f.country_select :country,["Australia","New Zealand"] %></div>
-
-  <div><%= f.submit "Update" %></div>
 <% end %>
+<table align="center">
+  <tr>
+    <td><h3>Cancel my account</h3></td>
+  </tr>  
+  <tr>
+    <td><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+    </td>
+    <td><%= link_to "Back", :back %></td>
+  </tr>
+</table>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
 
-<%= link_to "Back", :back %>
+
+

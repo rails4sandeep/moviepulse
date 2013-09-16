@@ -5,7 +5,7 @@
 <div class="span6">
 <table>
 <tr><th>Top Rated Now Running</th></tr>
-<% cache('top_rated_now_running',:expires_in => 1.hour) do %>				
+<% cache('top_rated_now_running',:expires_in => 6.hour) do %>				
 <!--%= paginate @movies %-->
 	<table class="table table-condensed">
 	<tr>		
@@ -26,7 +26,7 @@
 <table>
 <tr><th>Top Rated by Men</th></tr>
 
-	<% cache('top_rated_men',:expires_in => 1.hour) do %>				
+	<% cache('top_rated_men',:expires_in => 6.hour) do %>				
 	<table class="table table-condensed">
 	<tr>		
 	  <% @movies_men.each do |post| %>
@@ -46,7 +46,7 @@
 <table>
 <tr><th>Top Rated by Women</th></tr>
 
-	 <% cache('top_rated_women',:expires_in => 1.hour) do %>				
+	 <% cache('top_rated_women',:expires_in => 6.hour) do %>				
 	<table class="table table-condensed">
 	<tr>		
 	  <% @movies_women.each do |post| %>
@@ -83,7 +83,7 @@
 <table>
 <tr><th>Dampsquibs</th></tr>
 
-	<% cache('dampsquibs',:expires_in => 1.hour) do %>		
+	<% cache('dampsquibs',:expires_in => 6.hour) do %>		
 	<table class="table table-condensed">
 	<tr>		
 	  <% @movies_dampsquibs.each do |post| %>
@@ -101,7 +101,7 @@
 <table>
 <tr><th>Top Rated Young Adults</th></tr>
 
-	<% cache('top_rated_youth',:expires_in => 1.hour) do %>		
+	<% cache('top_rated_youth',:expires_in => 6.hour) do %>		
 	<table class="table table-condensed">
 	<tr>		
 	  <% @movies_youth.each do |post| %>
@@ -122,7 +122,7 @@
 <table>
 <tr><th>Now Playing Australia</th></tr>
 <table class="table table-condensed">
-	<% cache('now_playing_au',:expires_in => 3.hour) do %>			
+	<% cache('now_playing_au',:expires_in => 6.hour) do %>			
 	<% @movies_now_playing_au.each do |post| %>
 	      <tr>
 	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
