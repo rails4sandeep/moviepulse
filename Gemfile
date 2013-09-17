@@ -47,7 +47,8 @@ gem 'memcache-client'
 gem 'pg'
 #google analytics
 gem 'google-analytics-rails'
-
+#search engine indexing
+gem 'sitemap_generator'
 
 # Gems used only for assets and not required
 # in production environments by default.
