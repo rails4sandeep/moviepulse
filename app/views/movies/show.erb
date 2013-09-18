@@ -31,18 +31,16 @@
   <tr><td><b>Actors: </b><%= @movie.movie_cast %></td></tr>
   <tr><td><b>Production: </b><%= @movie.movie_production_companies %></td></tr>
   <tr><td><b>Runtime: </b><%= @movie.movie_runtime %> min</td></tr>
-  </tr>
+  <% if !@movie.trailer_url.empty? %>
+  <tr><td><iframe width="490" height="275" src="<%= @movie.trailer_url %>" frameborder="0" allowfullscreen></iframe></td></tr>
+  <% end %>
   </table>
 
 <% count = 0 %>
 <% @reviews.each do |post| %>
 <table class="table table-bordered table-condensed table-striped">
-  <tr><th>Name</th></tr>
-  <tr><td><%= @users[count].username %></td></tr>
-  <tr><th>Review</th></tr>
-  <tr><td><%= post.review %></td></tr>
-  <tr><th>Rating</th></tr>
-  <tr><td><%= post.rating %></td></tr>
+  <tr><td><%= @users[count].username %> rates it <b><%= post.rating %></b> and says</td></tr>
+  <tr><td><i>"<%= post.review %>"</i></td></tr>
     <% if user_signed_in? %>
     <% if @users[count].email == current_user.email %>
       <tr><td>

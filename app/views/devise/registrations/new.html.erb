@@ -1,10 +1,13 @@
-<h3 align="center">Sign up</h3>
+
 <style type="text/css">
 body { 
     background-image: url('https://s3-ap-southeast-2.amazonaws.com/moviepulse/background/background.jpg'); 
     background-repeat: no-repeat;
 } 
 </style>
+<div class="row-fluid">
+<div class="span6">
+  <h3 align="center">Sign up</h3>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>                                                    
   <%= devise_error_messages! %>
 
@@ -51,5 +54,19 @@ body {
     <td><%= render "devise/shared/links" %></td>
   </tr>
 </table>
-
-
+</div>
+<div class="span6">
+  <table>
+    <tr>
+      <td>
+        <b>Why do I have to provide my age,city and country during registration?</b>
+      </td>
+      </tr>
+      <tr>
+      <td>  
+        Providing these will help us in understanding the movie watching trends and will reflect in the leaderboard.The idea of the site is built around it.
+      </td>
+    </tr>
+  </table>
+</div>
+</div>

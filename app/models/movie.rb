@@ -85,8 +85,12 @@ end
 
 def trailer_url
   configuration = Tmdb::Configuration.new
-  trailer=Tmdb::Movie.trailers(self.tmdb_id)['youtube'][0]['source']
-  @trailer_url='youtube.com/embed/'+trailer
+  if Tmdb::Movie.trailers(self.tmdb_id)['youtube'].empty?
+    @trailer_url=''
+  else
+    trailer=Tmdb::Movie.trailers(self.tmdb_id)['youtube'][0]['source']
+    @trailer_url='http://www.youtube.com/embed/'+trailer
+  end  
 end
 
 def movie_genres
