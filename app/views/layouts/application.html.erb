@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Movie Pulse" %></title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!--title><%= content_for?(:title) ? yield(:title) : "Movie Pulse" %></title-->
+    <title>Movie Pulse: <%= yield :title %></title>
+    <meta name="description"><%= yield :description %></meta>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <!--[if lt IE 9]>

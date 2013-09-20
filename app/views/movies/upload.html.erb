@@ -1,3 +1,6 @@
+<%
+  title 'Upload: upload new list'
+%>
 <%= form_tag({action: :import}, multipart: true) do %>
   <%= file_field_tag 'file' %>
 	<%= submit_tag "Save changes" %>

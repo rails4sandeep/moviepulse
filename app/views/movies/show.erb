@@ -1,3 +1,7 @@
+<%
+  title @movie.name
+  description @movie.movie_tagline
+%>
 <div class="row-fluid">
 <div class="span12">
 <div class="span5">
@@ -32,7 +36,7 @@
   <tr><td><b>Production: </b><%= @movie.movie_production_companies %></td></tr>
   <tr><td><b>Runtime: </b><%= @movie.movie_runtime %> min</td></tr>
   <% if !@movie.trailer_url.empty? %>
-  <tr><td><iframe width="490" height="275" src="<%= @movie.trailer_url %>" frameborder="0" allowfullscreen></iframe></td></tr>
+  <tr><td><iframe width="290" height="200" src="<%= @movie.trailer_url %>" frameborder="0" allowfullscreen></iframe></td></tr>
   <% end %>
   </table>
 
