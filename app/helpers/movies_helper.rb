@@ -123,6 +123,48 @@ module MoviesHelper
   	return movies
   end
 
+  def upcoming
+  	movies=Array.new
+  	@upcoming=Tmdb::Movie.upcoming
+  	@upcoming.each do |movie|
+  		begin
+	  		movie_hash=Hash.new
+  			movie_hash[:name]=movie['original_title']
+  			movie_hash[:tmdb_id]=movie['id']
+  			movies << movie_hash
+  		end unless movie.nil?
+  	end
+  	return movies
+  end
+
+  def popular
+  	movies=Array.new
+  	@popular=Tmdb::Movie.popular
+  	@popular.each do |movie|
+  		begin
+	  		movie_hash=Hash.new
+  			movie_hash[:name]=movie['original_title']
+  			movie_hash[:tmdb_id]=movie['id']
+  			movies << movie_hash
+  		end unless movie.nil?
+  	end
+  	return movies
+  end
+
+  def tmdb_top_rated
+  	movies=Array.new
+  	@tmdb_top_rated=Tmdb::Movie.top_rated
+  	@tmdb_top_rated.each do |movie|
+  		begin
+	  		movie_hash=Hash.new
+  			movie_hash[:name]=movie['original_title']
+  			movie_hash[:tmdb_id]=movie['id']
+  			movies << movie_hash
+  		end unless movie.nil?
+  	end
+  	return movies
+  end
+
 def movie_title(movie_id)
     Tmdb::Movie.detail(movie_id).original_title
   end

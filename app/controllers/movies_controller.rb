@@ -86,6 +86,9 @@ class MoviesController < ApplicationController
     @movies_dampsquibs=damp_squibs
     @movies_now_playing=now_playing
     @movies_now_playing_au=Movie.movies_now_playing_australia
+    @movies_upcoming=upcoming
+    @movies_popular=popular
+    @movies_tmdb_top_rated=tmdb_top_rated
   end
 
   def edit

@@ -1,8 +1,43 @@
 <%
   title 'Dashboard: What Australia is watching'
- 
 %>
+
 <div class="span12">
+
+<div class="span12">
+<div class="row-fluid">
+<div class="span6">
+<table>
+<tr><th>Now Playing Australia</th></tr>
+<table class="table table-condensed">
+	<% cache('now_playing_au',:expires_in => 6.hour) do %>			
+	<% @movies_now_playing_au.each do |post| %>
+	      <tr>
+	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
+	      </tr>
+	  <% end %>
+	  <% end %>
+</table>
+</table>
+</div>
+
+<div class="span6">
+<table>
+<tr><th>Now Playing Worldwide</th></tr>
+<table class="table table-condensed">
+	<% cache('now_playing',:expires_in => 6.hour) do %>			
+	<% @movies_now_playing.each do |post| %>
+	      <tr>
+	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
+	      </tr>
+	  <% end %>
+	  <% end %>
+</table>
+</table>
+</div>
+</div>
+</div>
+	
 
 <div class="span12">
 <div class="span6">
@@ -119,14 +154,15 @@
 </div>
 </div>
 
+
 <div class="span12">
-
+<div class="row-fluid">	
 <div class="span6">
 <table>
-<tr><th>Now Playing Australia</th></tr>
+<tr><th>Upcoming Movies Worldwide</th></tr>
 <table class="table table-condensed">
-	<% cache('now_playing_au',:expires_in => 6.hour) do %>			
-	<% @movies_now_playing_au.each do |post| %>
+	<% cache('movies_upcoming',:expires_in => 6.hour) do %>			
+	<% @movies_upcoming.each do |post| %>
 	      <tr>
 	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
 	      </tr>
@@ -138,10 +174,10 @@
 
 <div class="span6">
 <table>
-<tr><th>Now Playing Worldwide</th></tr>
+<tr><th>Popular</th></tr>
 <table class="table table-condensed">
-	<% cache('now_playing',:expires_in => 6.hour) do %>			
-	<% @movies_now_playing.each do |post| %>
+	<% cache('movies_popular',:expires_in => 6.hour) do %>			
+	<% @movies_popular.each do |post| %>
 	      <tr>
 	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
 	      </tr>
@@ -150,7 +186,8 @@
 </table>
 </table>
 </div>
-
+</div>
+</div>
 
 </div>
 </div>
