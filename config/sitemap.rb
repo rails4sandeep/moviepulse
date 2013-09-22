@@ -14,14 +14,8 @@ SitemapGenerator::Sitemap.create do
   add '/faqs'
   add '/credits'
   add '/faqs/privacy'
-  add '/reviews/show'
-  add '/users/edit'
     Movie.find_each do |movie|
       add movie_path(movie), lastmod: movie.updated_at
-    end
-    
-    Review.find_each do |review|
-      add review_path(review), lastmod: review.updated_at
     end
 
   # Put links creation logic here.
