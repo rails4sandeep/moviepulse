@@ -1,10 +1,10 @@
 <% if !@movie.movie_tagline.nil? %>
 <%
-  title @movie.name+':'+@movie.movie_tagline
+  title @movie.name
 %>
 <% else %>
 <%
-  title @movie.name
+  title @movie.name+':'+@movie.movie_tagline
 %>
 <% end %>
 <div class="row-fluid">
