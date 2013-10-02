@@ -4,6 +4,7 @@ gem 'rails','3.2.13'
 
 #user management
 gem 'devise'
+gem 'omniauth-twitter'
 #country dropdown
 gem 'country-select'
 #pagination

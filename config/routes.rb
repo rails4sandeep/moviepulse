@@ -15,8 +15,9 @@ match 'faqs/privacy', :to => 'faqs#privacy'
 
   resources :reviews
   resources :movies
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   devise_for :users, :controllers => { :registrations => "registrations" }
-  devise_for :users
+  
 
   match 'show/:id', :to => 'movies#show'
   

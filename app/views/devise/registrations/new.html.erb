@@ -18,6 +18,7 @@ body {
     <td><%= f.label :email %></td>
     <td><%= f.email_field :email, :autofocus => true %></td>
   </tr>
+  <% if f.object.password_required? %>
   <tr>
     <td><%= f.label :password %></td>
     <td><%= f.password_field :password %></td>
@@ -26,6 +27,7 @@ body {
     <td><%= f.label :password_confirmation %></td>
     <td><%= f.password_field :password_confirmation %></td>
   </tr>
+  <% end %>
   <tr>
     <td><%= f.label :username %></td>
     <td><%= f.text_field :username %></td>
