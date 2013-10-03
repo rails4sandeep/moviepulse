@@ -18,6 +18,10 @@ body {
     <td><%= f.label :email %></td>
     <td><%= f.email_field :email, :autofocus => true %></td>
   </tr>
+  <tr>
+    <td><%= f.label :username %></td>
+    <td><%= f.text_field :username %></td>
+  </tr>
   <% if f.object.password_required? %>
   <tr>
     <td><%= f.label :password %></td>
@@ -26,11 +30,6 @@ body {
     <tr>
     <td><%= f.label :password_confirmation %></td>
     <td><%= f.password_field :password_confirmation %></td>
-  </tr>
-  <% end %>
-  <tr>
-    <td><%= f.label :username %></td>
-    <td><%= f.text_field :username %></td>
   </tr>
   <tr>
     <td><%= f.label :age %></td>
@@ -48,6 +47,7 @@ body {
     <td><%= f.label :country %></td>
     <td><%= f.country_select :country,["Australia","New Zealand"] %></td>
   </tr>
+  <% end %>
   <tr>
     <td><%= f.submit "Sign up",:class => "btn btn-large btn-primary" %></td>
   </tr>
