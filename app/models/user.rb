@@ -24,6 +24,8 @@ def self.from_omniauth(auth)
     user.provider = auth.provider
     user.uid = auth.uid
     user.username = auth.info.nickname
+    user.email = auth.info.email
+    user.sex = auth.extra.raw_info.gender
   end
 end
 
