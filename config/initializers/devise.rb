@@ -116,4 +116,5 @@ Devise.setup do |config|
   #   manager.default_strategies(:scope => :user).unshift :twitter_oauth
   # end
   config.omniauth :twitter, ENV["TWITTER_CONSUMER_KEY"], ENV["TWITTER_CONSUMER_SECRET"]
+  config.omniauth :facebook, ENV["FACEBOOK_CONSUMER_KEY"], ENV["FACEBOOK_CONSUMER_SECRET"]
 end

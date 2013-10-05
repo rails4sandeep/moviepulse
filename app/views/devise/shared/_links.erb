@@ -21,7 +21,11 @@
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
     <!--%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br /-->
-    <%= link_to image_tag("https://dev.twitter.com/sites/default/files/images_documentation/sign-in-with-twitter-gray.png"), omniauth_authorize_path(resource_name, provider) %><br />
+    <% if provider.to_s == 'facebook'%>
+    <%= link_to image_tag("login_facebook.png"), omniauth_authorize_path(resource_name, provider) %><br />
+    <% elsif provider.to_s == 'twitter' %>
+    <%= link_to image_tag("login_twitter.png"), omniauth_authorize_path(resource_name, provider) %><br />
+    <% end %>
   <% end -%>
 <% end -%>
 
