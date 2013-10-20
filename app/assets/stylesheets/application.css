@@ -60,10 +60,11 @@ background-color:#605884;
          #footer {
            height: 60px;
          }
+/*
          #footer {
            background-color: #DD4814;
          }
-
+*/
          /* Lastly, apply responsive CSS fixes as necessary */
          @media (max-width: 767px) {
            #footer {
@@ -85,6 +86,11 @@ background-color:#605884;
       .container .credit {
         margin: 20px 0;
       }
+
+/*for fixing dropdwn mobiles issue*/
+.dropdown-backdrop{
+    position: static;
+}      
 
 
 

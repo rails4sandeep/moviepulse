@@ -7,15 +7,18 @@
     <title>Movie Pulse: <%= yield :title %></title>
     <meta name="description"><%= yield :description %></meta>
     <%= stylesheet_link_tag "application", :media => "all" %>
+        <script type="text/javascript">  
+        //(document).ready(function () {  
+        //    $('.dropdown-toggle').dropdown();
+        //});  
+        $('.dropdown-toggle').dropdown();
+   </script>  
+
     <%= javascript_include_tag "application" %>
     <!--[if lt IE 9]>
     <script src="components/html5shiv/html5shiv.js"></script>
     <![endif]-->
-    <script type="text/javascript">  
-        $(document).ready(function () {  
-            $('.dropdown-toggle').dropdown();  
-        });  
-   </script>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
     <%= analytics_init if Rails.env.production? %>
@@ -56,7 +59,7 @@
   <div id="push"></div>
       </div>
 
-    <div id="footer">
+    <!--div id="footer">
       <div class="container">
     <footer class="footer">
         <%= link_to "FAQ",controller: "/faqs",action: "index" %>
@@ -66,6 +69,6 @@
         @2013 Movie Pulse
     </footer> 
       </div>
-    </div>
+    </div-->
   </body>
 </html>
