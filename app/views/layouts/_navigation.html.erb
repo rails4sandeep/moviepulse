@@ -1,88 +1,29 @@
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-</a>
-<!--%= link_to image_tag('SmallLogo2.png',:size => '100x80'), root_path, :class => 'brand' %-->
-<%= link_to "Movie Pulse", root_path, :class => 'brand' %>
-<div class="nav-collapse">
-  <ul class="nav">
-    <li class="active"><%= link_to "Home", :controller => "/movies", :action => "dashboard" %></li>
-    <li><%= link_to "Search Movies", controller: "/movies", action: "index" %></li>
-    <% if user_signed_in? %>
-      <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        Account
-        <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu">
-            <li>
-              <%= link_to "My Reviews", controller: "/reviews", action: "show" %>
-            </li>
-            <li>
-              <%= link_to('Edit Account', edit_user_registration_path) %>
-            </li>
-            <li>
-              <%= link_to('Logout', destroy_user_session_path) %>
-            </li>
-      </ul>
-      </li>
-      <% else %>
-        <li>
-          <%= link_to('Sign up', new_user_registration_path)  %>
-        </li>
-        <li>
-          <%= link_to('Login', new_user_session_path)  %>
-        </li>
-      <% end %>
-      <li class="dropdown">
-      <a class="dropdown-toggle"
-      data-toggle="dropdown"
-      href="#">
-      About
-      <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu">
-            <li>
-              <%= link_to "FAQ",controller: "/faqs",action: "index" %>
-            </li>
-            <li>
-              <%= link_to "Terms", faqs_privacy_path %>
-            </li>
-            <li>
-              <%= link_to "Privacy", faqs_privacy_path %>
-            </li>
-            <li>
-              <%= link_to "Credits",controller: "/credits",action: "index" %>
-            </li>
-      </ul>
-      </li>
-      <% if admin_signed_in? %>
-			<li class="dropdown">
-			<a class="dropdown-toggle"
-			data-toggle="dropdown"
-			href="#">
-			Admin
-			<b class="caret"></b>
-			</a>
-			<ul class="dropdown-menu">
-	          <li>
-	            <%= link_to('Logout', destroy_admin_session_path) %>
-	          </li>
-	          <li>
-	            <%= link_to('Add FAQ', new_faq_path) %>
-	          </li>
-	          <li>
-	            <%= link_to('Add Credit', new_credit_path) %>
-	          </li>
-	          <li>
-	            <%= link_to('Upload', movies_upload_path) %>
-	          </li>
-			</ul>
-			</li>
-      <% end %>
-  </ul>
-</div>
+<%= nav_bar :fixed => :top, :brand => "Movie Pulse", :responsive => true do %>
+    <%= menu_group do %>
+        <%= menu_item "Home", :controller => "/movies", :action => "dashboard" %>
+		<%= menu_item "Search Movies", controller: "/movies", action: "index" %>
+        <%= menu_divider %>
+        <%= drop_down "About" do %>
+			<%= menu_item "FAQs", controller: "/faqs",action: "index" %>
+			<%= menu_item "Terms", faqs_privacy_path %>
+			<%= menu_item "Privacy", faqs_privacy_path %>
+			<%= menu_item "Credits", controller: "/credits",action: "index" %>
+			<% end %>
+		<% if user_signed_in? %>
+			<%= menu_divider %>
+			<%= drop_down "Account" do %>
+				<%= menu_item "My Reviews", controller: "/reviews", action: "show" %>
+				<%= menu_item "Edit Account", edit_user_registration_path %>
+				<%= menu_item "Logout", destroy_user_session_path %>
+			<% end %>
+		<% else %>	
+			<%= menu_item "Sign Up", new_user_registration_path %>
+			<%= menu_item "Login", new_user_session_path %>
+		<% end %>
+	<% end %>
+<% end %>	
+
+
 
 
 
