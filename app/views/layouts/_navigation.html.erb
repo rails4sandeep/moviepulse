@@ -3,7 +3,7 @@
         <%= menu_item "Home", root_path %>
 		<%= menu_item "Search Movies", movies_path %>
 		<% if user_signed_in? %>
-			<%= menu_divider %>
+			
 			<%= drop_down "Account" do %>
 				<%= menu_item "My Reviews", reviews_path %>
 				<%= menu_item "Edit Account", edit_user_registration_path %>
@@ -13,7 +13,7 @@
 			<%= menu_item "Sign Up", new_user_registration_path %>
 			<%= menu_item "Login", new_user_session_path %>
 		<% end %>
-		<%= menu_divider %>
+		
         <%= drop_down "About" do %>
 			<%= menu_item "FAQs", faqs_path %>
 			<%= menu_item "Terms", faqs_privacy_path %>
