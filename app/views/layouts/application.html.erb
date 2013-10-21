@@ -7,6 +7,14 @@
     <title>Movie Pulse: <%= yield :title %></title>
     <meta name="description"><%= yield :description %></meta>
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <script>
+      jQuery(document).ready(function($) {
+        $("li.dropdown a").click(function(e){
+        $(this).next('ul.dropdown-menu').css("display", "block");
+        e.stopPropagation();
+      });
+    });
+    </script>  
         <script type="text/javascript">  
         //(document).ready(function () {  
         //    $('.dropdown-toggle').dropdown();
