@@ -1,24 +1,24 @@
 <%= nav_bar :fixed => :top, :brand => "Movie Pulse", :responsive => true do %>
     <%= menu_group do %>
-        <%= menu_item "Home", :controller => "/movies", :action => "dashboard" %>
-		<%= menu_item "Search Movies", controller: "/movies", action: "index" %>
-        <%= menu_divider %>
-        <%= drop_down "About" do %>
-			<%= menu_item "FAQs", controller: "/faqs",action: "index" %>
-			<%= menu_item "Terms", faqs_privacy_path %>
-			<%= menu_item "Privacy", faqs_privacy_path %>
-			<%= menu_item "Credits", controller: "/credits",action: "index" %>
-			<% end %>
+        <%= menu_item "Home", root_path %>
+		<%= menu_item "Search Movies", movies_path %>
 		<% if user_signed_in? %>
 			<%= menu_divider %>
 			<%= drop_down "Account" do %>
-				<%= menu_item "My Reviews", controller: "/reviews", action: "show" %>
+				<%= menu_item "My Reviews", reviews_path %>
 				<%= menu_item "Edit Account", edit_user_registration_path %>
 				<%= menu_item "Logout", destroy_user_session_path %>
 			<% end %>
 		<% else %>	
 			<%= menu_item "Sign Up", new_user_registration_path %>
 			<%= menu_item "Login", new_user_session_path %>
+		<% end %>
+		<%= menu_divider %>
+        <%= drop_down "About" do %>
+			<%= menu_item "FAQs", faqs_path %>
+			<%= menu_item "Terms", faqs_privacy_path %>
+			<%= menu_item "Privacy", faqs_privacy_path %>
+			<%= menu_item "Credits", credits_path %>
 		<% end %>
 	<% end %>
 <% end %>	
