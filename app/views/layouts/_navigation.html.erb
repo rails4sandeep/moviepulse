@@ -5,7 +5,7 @@
 		<% if user_signed_in? %>
 			
 			<%= drop_down "Account" do %>
-				<%= menu_item "My Reviews", reviews_path %>
+				<%= menu_item "My Reviews", reviews_show_path %>
 				<%= menu_item "Edit Account", edit_user_registration_path %>
 				<%= menu_item "Logout", destroy_user_session_path %>
 			<% end %>
