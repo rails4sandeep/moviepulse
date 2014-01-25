@@ -10,7 +10,7 @@
 <div class="span6">
 <table>
 <tr><th>Top Rated Now Running</th></tr>
-<% cache('top_rated_now_running',:expires_in => 5.seconds) do %>
+<% cache('top_rated_now_running',:expires_in => 3.hours) do %>
 <!--%= paginate @movies %-->
 	<table class="table table-condensed">
 	<tr>		
@@ -31,7 +31,7 @@
 <table>
 <tr><th>Top Rated by Men</th></tr>
 
-	<% cache('top_rated_men',:expires_in => 5.seconds) do %>
+	<% cache('top_rated_men',:expires_in => 3.hours) do %>
 	<table class="table table-condensed">
 	<tr>		
 	  <% @movies_men.each do |post| %>
@@ -51,7 +51,7 @@
 <table>
 <tr><th>Top Rated by Women</th></tr>
 
-	 <% cache('top_rated_women',:expires_in => 5.seconds) do %>
+	 <% cache('top_rated_women',:expires_in => 3.hours) do %>
 	<table class="table table-condensed">
 	<tr>		
 	  <% @movies_women.each_with_index do |post,count| %>
@@ -69,7 +69,7 @@
 <table>
 <tr><th>Currently talked about</th></tr>
 
-	<% cache('currently_talked_about',:expires_in => 10.minutes) do %>				
+	<% cache('currently_talked_about',:expires_in => 3.hours) do %>
 	<table class="table table-condensed">
 	<tr>		
 	  <% @current_movies.each do |post| %>
@@ -89,7 +89,7 @@
 <table>
 <tr><th>Dampsquibs</th></tr>
 
-	<% cache('dampsquibs',:expires_in => 5.seconds) do %>
+	<% cache('dampsquibs',:expires_in => 3.hours) do %>
 	<table class="table table-condensed">
 	<tr>		
 	  <% @movies_dampsquibs.each do |post| %>
@@ -107,7 +107,7 @@
 <table>
 <tr><th>Top Rated Young Adults</th></tr>
 
-	<% cache('top_rated_youth',:expires_in => 5.seconds) do %>
+	<% cache('top_rated_youth',:expires_in => 3.hours) do %>
 	<table class="table table-condensed">
 	<tr>		
 	  <% @movies_youth.each do |post| %>
@@ -128,7 +128,7 @@
 <table>
 <tr><th>Now Playing Australia</th></tr>
 <table class="table table-condensed">
-	<% cache('now_playing_au',:expires_in => 5.seconds) do %>
+	<% cache('now_playing_au',:expires_in => 3.hours) do %>
 	<% @movies_now_playing_au.each do |post| %>
 	      <tr>
 	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
@@ -143,7 +143,7 @@
 <table>
 <tr><th>Now Playing Worldwide</th></tr>
 <table class="table table-condensed">
-	<% cache('now_playing',:expires_in => 5.seconds) do %>
+	<% cache('now_playing',:expires_in => 3.hours) do %>
 	<% @movies_now_playing.each do |post| %>
 	      <tr>
 	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
@@ -162,7 +162,7 @@
 <table>
 <tr><th>Upcoming Movies Worldwide</th></tr>
 <table class="table table-condensed">
-	<% cache('movies_upcoming',:expires_in => 5.seconds) do %>
+	<% cache('movies_upcoming',:expires_in => 3.hours) do %>
 	<% @movies_upcoming.each do |post| %>
 	      <tr>
 	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
@@ -177,7 +177,7 @@
 <table>
 <tr><th>Popular</th></tr>
 <table class="table table-condensed">
-	<% cache('movies_popular',:expires_in => 5.seconds) do %>
+	<% cache('movies_popular',:expires_in => 3.hours) do %>
 	<% @movies_popular.each do |post| %>
 	      <tr>
 	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
