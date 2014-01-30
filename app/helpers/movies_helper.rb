@@ -173,4 +173,14 @@ def matching_movie_results(movie_name)
   Tmdb::Movie.find(movie_name)
 end
 
+def poster_url_path(tmdb_id)
+  configuration = Tmdb::Configuration.new
+  if Tmdb::Movie.detail(tmdb_id).poster_path.nil?
+    poster_path=''
+  else
+    poster_path=Tmdb::Movie.detail(tmdb_id).poster_path
+  end  
+    @poster_url=configuration.base_url+'w342'+poster_path
+end
+  
 end
