@@ -77,9 +77,9 @@ end
 def thumb_url
   configuration = Tmdb::Configuration.new
   if Tmdb::Movie.detail(self.tmdb_id).poster_path.nil?
-    @thumb_url=configuration.base_url+'w154'+''
+    @thumb_url=configuration.base_url+'w500'+''
   else  
-    @thumb_url=configuration.base_url+'w154'+Tmdb::Movie.detail(self.tmdb_id).poster_path
+    @thumb_url=configuration.base_url+'w500'+Tmdb::Movie.detail(self.tmdb_id).poster_path
   end  
 end
 
