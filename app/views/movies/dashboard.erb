@@ -2,193 +2,80 @@
   title 'Dashboard: What Australia is watching'
 %>
 
-<div class="span12">
-
-	
-
-<div class="span12">
-<div class="span6">
-<table>
-<tr><th>Top Rated Now Running</th></tr>
-<% cache('top_rated_now_running',:expires_in => 3.hours) do %>
-<!--%= paginate @movies %-->
-	<table class="table table-condensed">
-	<tr>		
-	  <% @movies.each do |post| %>
-	  	<% if post.thumb_url.empty? %>
-	  	<td><%= link_to "#{post.name}", post %></td>
-	  	<% else %>	
-	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
-	  	<% end %>
-	  <% end %>
-	 </tr> 
-	</table>      
-	 <% end %>
+<table class="table table-bordered">
+<caption><b>Now Playing</b></caption>
+<% cache('movies_now_playing',:expires_in => 6.hours) do %>
+<tr><td>
+<div id="movies_now_playing" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#movies_now_playing" data-slide-to="0" class="active"></li>
+    <li data-target="#movies_now_playing" data-slide-to="1"></li>
+    <li data-target="#movies_now_playing" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <% @movies_now_playing.each_with_index do |post,count| %>
+      <% if count==0 %>
+        <div class="active item"><%= link_to image_tag(poster_url_path(post[:tmdb_id])),controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></div>
+      <% else %>
+        <div class="item"><%= link_to image_tag(poster_url_path(post[:tmdb_id])),controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></div>
+      <% end %>
+    <% end %>
+  </div>
+  <a class="carousel-control left" href="#movies_now_playing" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#movies_now_playing" data-slide="next">&rsaquo;</a>
+</div>
+</td></tr>
+<% end %>
 </table>
+
+<table class="table table-bordered">
+<caption><b>Comming Soon</b></caption>
+<% cache('movies_upcoming',:expires_in => 6.hours) do %>
+<tr><td>
+<div id="movies_upcoming" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#movies_upcoming" data-slide-to="0" class="active"></li>
+    <li data-target="#movies_upcoming" data-slide-to="1"></li>
+    <li data-target="#movies_upcoming" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <% @movies_upcoming.each_with_index do |post,count| %>
+      <% if count==0 %>
+        <div class="active item"><%= link_to image_tag(poster_url_path(post[:tmdb_id])),controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></div>
+      <% else %>
+        <div class="item"><%= link_to image_tag(poster_url_path(post[:tmdb_id])),controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></div>
+      <% end %>
+    <% end %>
+  </div>
+  <a class="carousel-control left" href="#movies_upcoming" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#movies_upcoming" data-slide="next">&rsaquo;</a>
 </div>
-
-<div class="span6">
-<table>
-<tr><th>Top Rated by Men</th></tr>
-
-	<% cache('top_rated_men',:expires_in => 3.hours) do %>
-	<table class="table table-condensed">
-	<tr>		
-	  <% @movies_men.each do |post| %>
-	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
-	  <% end %>
-	 </tr> 
-	 
-	</table>      
-	  <% end %>
-
+</td></tr>
+<% end %>
 </table>
-</div>
-</div>
 
-<div class="span12">
-<div class="span6">
-<table>
-<tr><th>Top Rated by Women</th></tr>
-
-	 <% cache('top_rated_women',:expires_in => 3.hours) do %>
-	<table class="table table-condensed">
-	<tr>		
-	  <% @movies_women.each_with_index do |post,count| %>
-	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
-          <% break if count==5 %>
-	  <% end %>
-	 </tr> 
-	</table>      
-	<% end %>
+<table class="table table-bordered">
+<caption><b>Most Searched</b></caption>
+<% cache('movies_popular',:expires_in => 6.hours) do %>
+<tr><td>
+<div id="movies_popular" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#movies_popular" data-slide-to="0" class="active"></li>
+    <li data-target="#movies_popular" data-slide-to="1"></li>
+    <li data-target="#movies_popular" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <% @movies_popular.each_with_index do |post,count| %>
+      <% if count==0 %>
+        <div class="active item"><%= link_to image_tag(poster_url_path(post[:tmdb_id])),controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></div>
+      <% else %>
+        <div class="item"><%= link_to image_tag(poster_url_path(post[:tmdb_id])),controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></div>
+      <% end %>
+    <% end %>
+  </div>
+  <a class="carousel-control left" href="#movies_popular" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#movies_popular" data-slide="next">&rsaquo;</a>
+</div>
+</td></tr>
+<% end %>
 </table>
-</div>
-
-
-<!--div class="span6">
-<table>
-<tr><th>Currently talked about</th></tr>
-
-	<% cache('currently_talked_about',:expires_in => 3.hours) do %>
-	<table class="table table-condensed">
-	<tr>		
-	  <% @current_movies.each do |post| %>
-	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
-	  <% end %>
-	 </tr> 
-	
-	</table>      
-	 <% end %>  
-
-</table>
-</div-->
-</div>
-
-<!--div class="span12">
-<div class="span6">
-<table>
-<tr><th>Dampsquibs</th></tr>
-
-	<% cache('dampsquibs',:expires_in => 3.hours) do %>
-	<table class="table table-condensed">
-	<tr>		
-	  <% @movies_dampsquibs.each do |post| %>
-	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
-	  <% end %>
-	 </tr> 
-	
-	</table>      
-	 <% end %>  
-
-</table>
-</div>
-
-<div class="span6">
-<table>
-<tr><th>Top Rated Young Adults</th></tr>
-
-	<% cache('top_rated_youth',:expires_in => 3.hours) do %>
-	<table class="table table-condensed">
-	<tr>		
-	  <% @movies_youth.each do |post| %>
-	  	<td><%= link_to image_tag(post.thumb_url), post %></td>
-	  <% end %>
-	 </tr> 
-	
-	</table>      
-	 <% end %>
-
-</table>
-</div>
-</div-->
-
-<div class="span12">
-<div class="row-fluid">
-<div class="span6">
-<table>
-<tr><th>Now Playing Australia</th></tr>
-<table class="table table-condensed">
-	<% cache('now_playing_au',:expires_in => 3.hours) do %>
-	<% @movies_now_playing_au.each do |post| %>
-	      <tr>
-	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
-	      </tr>
-	  <% end %>
-	  <% end %>
-</table>
-</table>
-</div>
-
-<div class="span6">
-<table>
-<tr><th>Now Playing Worldwide</th></tr>
-<table class="table table-condensed">
-	<% cache('now_playing',:expires_in => 3.hours) do %>
-	<% @movies_now_playing.each do |post| %>
-	      <tr>
-	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
-	      </tr>
-	  <% end %>
-	  <% end %>
-</table>
-</table>
-</div>
-</div>
-</div>
-
-<div class="span12">
-<div class="row-fluid">	
-<div class="span6">
-<table>
-<tr><th>Upcoming Movies Worldwide</th></tr>
-<table class="table table-condensed">
-	<% cache('movies_upcoming',:expires_in => 3.hours) do %>
-	<% @movies_upcoming.each do |post| %>
-	      <tr>
-	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
-	      </tr>
-	  <% end %>
-	  <% end %>
-</table>
-</table>
-</div>
-
-<div class="span6">
-<table>
-<tr><th>Popular</th></tr>
-<table class="table table-condensed">
-	<% cache('movies_popular',:expires_in => 3.hours) do %>
-	<% @movies_popular.each do |post| %>
-	      <tr>
-	        <td><%= link_to "#{post[:name]}", controller: "movies", action: "create_from_tmdb", id: post[:tmdb_id] %></td>
-	      </tr>
-	  <% end %>
-	  <% end %>
-</table>
-</table>
-</div>
-</div>
-</div>
-
-</div>
-<!--/div-->
