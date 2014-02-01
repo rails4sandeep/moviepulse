@@ -182,5 +182,15 @@ def poster_url_path(tmdb_id)
   end  
     @poster_url=configuration.base_url+'w342'+poster_path
 end
-  
+
+  def backdrop_url_path(tmdb_id)
+    configuration = Tmdb::Configuration.new
+    if Tmdb::Movie.detail(tmdb_id).backdrop_path.nil?
+      backdrop_path=''
+    else
+      backdrop_path=Tmdb::Movie.detail(tmdb_id).backdrop_path
+    end
+    @poster_url=configuration.base_url+'w1280'+backdrop_path
+  end
+
 end
