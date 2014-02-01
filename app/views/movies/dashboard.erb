@@ -2,11 +2,11 @@
   title 'Dashboard: What Australia is watching'
 %>
 
-<table class="table table-bordered">
+<table>
 <caption><b>Now Playing</b></caption>
 <% cache('movies_now_playing',:expires_in => 6.hours) do %>
 <tr><td>
-<div id="movies_now_playing" class="carousel slide">
+<div id="movies_now_playing" class="carousel slide" style="width: 400px; margin: 0 auto">
   <ol class="carousel-indicators">
     <li data-target="#movies_now_playing" data-slide-to="0" class="active"></li>
     <li data-target="#movies_now_playing" data-slide-to="1"></li>
@@ -28,11 +28,11 @@
 <% end %>
 </table>
 
-<table class="table table-bordered">
-<caption><b>Comming Soon</b></caption>
+<table>
+<caption><b>Coming Soon</b></caption>
 <% cache('movies_upcoming',:expires_in => 6.hours) do %>
 <tr><td>
-<div id="movies_upcoming" class="carousel slide">
+<div id="movies_upcoming" class="carousel slide" style="width: 400px; margin: 0 auto">
   <ol class="carousel-indicators">
     <li data-target="#movies_upcoming" data-slide-to="0" class="active"></li>
     <li data-target="#movies_upcoming" data-slide-to="1"></li>
@@ -54,11 +54,11 @@
 <% end %>
 </table>
 
-<table class="table table-bordered">
+<table>
 <caption><b>Most Searched</b></caption>
 <% cache('movies_popular',:expires_in => 6.hours) do %>
 <tr><td>
-<div id="movies_popular" class="carousel slide">
+<div id="movies_popular" class="carousel slide" style="width: 400px; margin: 0 auto">
   <ol class="carousel-indicators">
     <li data-target="#movies_popular" data-slide-to="0" class="active"></li>
     <li data-target="#movies_popular" data-slide-to="1"></li>
