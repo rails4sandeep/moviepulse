@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_filter :authenticate_admin!, :only => [:new, :create], :except => [:index,:show,:movie,:dashboard,:create_from_tmdb]
+  before_filter :authenticate_admin!, :only => [:new, :create], :except => [:index,:show,:movie,:dashboard,:create_from_tmdb,:suggest,:suggest_movies]
   include MoviesHelper
 
   def index
@@ -79,8 +79,8 @@ class MoviesController < ApplicationController
   def dashboard
     @movies=Movie.movies_by_average_rating
     #@movies=Kaminari.paginate_array(Movie.movies_by_average_rating).page(params[:page]).per(10)
-    @movies_men=Movie.movies_by_average_rating_men
-    @movies_women=Movie.movies_by_average_rating_women
+    @movies_men=top_rated_by_sex('male')
+    @movies_women=top_rated_by_sex('female')
     @movies_youth=top_rated_by_youth(40)
     @current_movies=currently_talked_about
     @movies_dampsquibs=damp_squibs
@@ -137,6 +137,15 @@ class MoviesController < ApplicationController
 
   def upload
     
+  end
+
+  #def suggest
+
+  #end
+
+  def suggest
+     @suggest_results=suggested_movie_results(params[:name]) unless params[:name].nil?
+     @name = params[:name]
   end
 
 end

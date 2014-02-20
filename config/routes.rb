@@ -12,6 +12,7 @@ match 'faqs/privacy', :to => 'faqs#privacy'
   match 'movies/dashboard', :to => 'movies#dashboard'
   match 'movies/upload', :to => 'movies#upload'
   match 'reviews/show', :to => 'reviews#show'
+  match 'movies/suggest', :to => 'movies#suggest'
 
   resources :reviews
   resources :movies
