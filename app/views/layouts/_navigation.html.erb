@@ -1,7 +1,9 @@
-<%= nav_bar :fixed => :top, :brand => "Movie Pulse", :responsive => true do %>
+<%= nav_bar :brand => image_tag("SmallLogo2_315X85.png"),:brand_link => root_path,:static => :top,:align => :center do %>
+<%= nav_bar :responsive => true %>
     <%= menu_group do %>
         <%= menu_item "Home", root_path %>
-		<%= menu_item "Search Movies", movies_path %>
+		<%= menu_item "Search", movies_path %>
+
 		<% if user_signed_in? %>
 			
 			<%= drop_down "Account" do %>
@@ -21,7 +23,7 @@
 			<%= menu_item "Credits", credits_path %>
 		<% end %>
 	<% end %>
-<% end %>	
+<% end %>
 
 
 

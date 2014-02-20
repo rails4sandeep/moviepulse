@@ -1,7 +1,7 @@
 <%
   title 'Search: search a movie'
 %>
-<div class="span12">
+
 <div class="span6">  
 <div class="navbar-search">
   <%= search_form_for @search do |f| %>
@@ -23,7 +23,7 @@
 
 <% end %>
 
-  <% if !@movie_results.empty? %>
+<!--   <% if !@movie_results.empty? %>
   
   <table class="table table-bordered table-condensed table-striped">
     <caption><b>From movie pulse database</b></caption>
@@ -42,7 +42,7 @@
   <%= paginate @movies %>
   </div>
 <% end %>
-
+ -->
 </div>
 
 
