@@ -3,12 +3,12 @@
 %>
 <style type="text/css">
 body { 
-    background-image: url('https://s3-ap-southeast-2.amazonaws.com/moviepulse/background/background.jpg'); 
+    //background-image: url('https://s3-ap-southeast-2.amazonaws.com/moviepulse/background/background.jpg'); 
+    background-image: url(<%= image_path 'gradient-bubbles.jpg' %>);
     background-repeat: no-repeat;
-    background-position: center;
+    //background-position: center;
 } 
 </style>
-
 <h3 align="center">Edit <%= resource_name.to_s.humanize %></h3>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
