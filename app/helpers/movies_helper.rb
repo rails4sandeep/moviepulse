@@ -195,7 +195,7 @@ end
 
   def movie_tweets(movie_name,result_type)
     @tweets=[]
-    @twitter_client.search(movie_name, :result_type => result_type).take(25).each do |tweet|
+    $twitter_client.search(movie_name, :result_type => result_type,:lang => "en").take(50).each do |tweet|
       @tweets << tweet
     end
   end
