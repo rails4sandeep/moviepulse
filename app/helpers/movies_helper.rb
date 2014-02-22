@@ -193,4 +193,11 @@ end
     @poster_url=configuration.base_url+'w1280'+backdrop_path
   end
 
+  def movie_tweets(movie_name,result_type)
+    @tweets=[]
+    @twitter_client.search(movie_name, :result_type => result_type).take(25).each do |tweet|
+      @tweets << tweet
+    end
+  end
+
 end

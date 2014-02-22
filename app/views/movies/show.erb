@@ -11,7 +11,7 @@
 <div class="row-fluid">
 
 <div class="span5">
-<% cache("#{@movie.name}",:expires_in => 6.days) do %>  
+<% cache("#{@movie.name}",:expires_in => 1.second) do %>
 <table>
   <tr>
       <td>
@@ -47,6 +47,18 @@
   <tr><td><iframe width="290" height="200" src="<%= @movie.trailer_url %>" frameborder="0" allowfullscreen></iframe></td></tr>
   <% end %>
   </table>
+
+<table class="table table-bordered table-condensed table-striped">
+    <caption><b>Twitter Buzz</b></caption>
+    <% movie_tweets(@movie.name,"popular").each do |tweet| %>
+    <tr>
+      <td>
+        <i>tweet</i>
+      </td>
+    </tr>
+    <% end %>
+</table>
+
 <% end %>
 <% count = 0 %>
 <% @reviews.each do |post| %>
