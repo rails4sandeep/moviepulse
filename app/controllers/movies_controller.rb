@@ -77,18 +77,18 @@ class MoviesController < ApplicationController
   end
 
   def dashboard
-    @movies=Movie.movies_by_average_rating
+    #@movies=Movie.movies_by_average_rating
     #@movies=Kaminari.paginate_array(Movie.movies_by_average_rating).page(params[:page]).per(10)
-    @movies_men=top_rated_by_sex('male')
-    @movies_women=top_rated_by_sex('female')
-    @movies_youth=top_rated_by_youth(40)
-    @current_movies=currently_talked_about
-    @movies_dampsquibs=damp_squibs
+    #@movies_men=top_rated_by_sex('male')
+    #@movies_women=top_rated_by_sex('female')
+    #@movies_youth=top_rated_by_youth(40)
+    #@current_movies=currently_talked_about
+    #@movies_dampsquibs=damp_squibs
     @movies_now_playing=now_playing
-    @movies_now_playing_au=Movie.movies_now_playing_australia
+    #@movies_now_playing_au=Movie.movies_now_playing_australia
     @movies_upcoming=upcoming
     @movies_popular=popular
-    @movies_tmdb_top_rated=tmdb_top_rated
+    #@movies_tmdb_top_rated=tmdb_top_rated
   end
 
   def edit

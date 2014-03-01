@@ -180,7 +180,7 @@ def poster_url_path(tmdb_id)
   else
     poster_path=Tmdb::Movie.detail(tmdb_id).poster_path
   end  
-    @poster_url=configuration.base_url+'w342'+poster_path
+    @poster_url=configuration.base_url+'w500'+poster_path
 end
 
   def backdrop_url_path(tmdb_id)
