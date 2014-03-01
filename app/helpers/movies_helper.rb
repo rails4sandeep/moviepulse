@@ -190,7 +190,7 @@ end
     else
       backdrop_path=Tmdb::Movie.detail(tmdb_id).backdrop_path
     end
-    @poster_url=configuration.base_url+'w1280'+backdrop_path
+    @poster_url=configuration.base_url+'original'+backdrop_path
   end
 
   def movie_tweets(movie_name,result_type)
