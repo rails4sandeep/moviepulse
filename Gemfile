@@ -67,7 +67,8 @@ gem 'sitemap_generator'
 gem 'jquery-rails'
 #movie twitter feeds
 gem 'twitter'
-
+#visual display of rating
+gem 'google_visualr'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

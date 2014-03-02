@@ -31,11 +31,8 @@
   <tr>
     <td>
         <b>Overall Movie rating: </b>
-        <% if @average_movie_rating.nil? %>
-          <%= @movie.movie_average_rating %> (TMDB community rating)
-        <% else %>
-          <%= @average_movie_rating %>
-        <% end %>
+          <%= render_chart(@chart, 'chart') %>
+          <div id='chart'></div>
     </td>
   </tr>
   <tr><td><b>Genres: </b><%= @movie.movie_genres %></td></tr>

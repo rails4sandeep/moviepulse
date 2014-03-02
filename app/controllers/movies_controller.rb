@@ -31,6 +31,24 @@ class MoviesController < ApplicationController
       @ratings << review.rating
     end
     @average_movie_rating=(@ratings.sum)/(@ratings.count) unless @ratings.empty?
+
+    begin
+      data_table = GoogleVisualr::DataTable.new
+      data_table.new_column('string'  , 'Label')
+      data_table.new_column('number'  , 'Value')
+      data_table.add_rows(1)
+      data_table.set_cell(0, 0, 'Rating' )
+      if @ratings.empty?
+        data_table.set_cell(0, 1, @movie.movie_average_rating)
+        opts   = { :width => 400,:height => 120,:majorTicks => 10,:minorTicks => 5,:max => 10,:yellowFrom => 0, :yellowTo => @movie.movie_average_rating }
+      else
+        data_table.set_cell(0, 1, @movie_average_rating)    
+        opts   = { :width => 400,:height => 120,:majorTicks => 10,:minorTicks => 5,:max => 10,:yellowFrom => 0, :yellowTo => @movie_average_rating }
+      end  
+      
+      
+      @chart = GoogleVisualr::Interactive::Gauge.new(data_table, opts)
+    end
   end
 
   def movie

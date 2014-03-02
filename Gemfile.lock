@@ -80,6 +80,7 @@ GEM
       ruby-hmac
     formatador (0.2.4)
     google-analytics-rails (0.0.4)
+    google_visualr (2.2.0)
     gotcha (0.0.6)
     hashie (2.0.5)
     hike (1.2.3)
@@ -253,6 +254,7 @@ DEPENDENCIES
   figaro
   fog
   google-analytics-rails
+  google_visualr
   gotcha
   jquery-rails
   kaminari
