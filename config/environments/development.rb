@@ -11,15 +11,6 @@ Ohmyroots::Application.configure do
 
   #domain:               'gmail.com',
   #config.action_mailer.delivery_method = :smtp
-=begin
-  config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
-      :port                 => 587,
-      :user_name            => 'sandeepkuvs',
-      :password             => 'Sydney#123',
-      :authentication       => 'plain',
-      :enable_starttls_auto => true  }
-=end
   #########
   # Settings specified here will take precedence over those in config/application.rb
    
